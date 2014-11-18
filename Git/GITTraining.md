@@ -1,0 +1,1 @@
+/home/astek/Documents/Trainings/GIT/reveal.js/GITTraining.md
