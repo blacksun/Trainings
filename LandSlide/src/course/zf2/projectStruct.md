@@ -1,6 +1,8 @@
 #Structure project
 
-![Landscape](../../img/stucture.png)
+![Landscape](../../img/structure.png)
+
+---
 
 #Structure project
 
