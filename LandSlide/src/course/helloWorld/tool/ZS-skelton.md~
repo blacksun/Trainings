@@ -1,6 +1,8 @@
-# INSTALL ZEND FRAMEWORK 2
+# INSTALL ZF2
 
 ---
+
+# INSTALL ZF2
 
 ## Create Zend Skeleton Using zftool 
 
@@ -12,17 +14,19 @@ This command installs the ZendSkeletonApplication in the specified path.
 
 ---
 
+# INSTALL ZF2
+
 ## Create Zend Skeleton Using Zend Studio
 
 ### Step 1
-![Landscape](../../img/chooseLocalProject.png)
+![Landscape](../../../img/chooseLocalProject.png)
 
 ---
 
 ## Create Zend Skeleton Using Zend Studio
 
 ### Step 2
-![Landscape](../../img/renameProject.png)
+![Landscape](../../../img/renameProject.png)
 
 ---
 
@@ -30,4 +34,4 @@ This command installs the ZendSkeletonApplication in the specified path.
 
 ### Step 3
 
-![Landscape](../../img/choosezf2.png)
+![Landscape](../../../img/choosezf2.png)

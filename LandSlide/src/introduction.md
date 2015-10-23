@@ -1,8 +1,7 @@
 # ZEND FRAMEWORK 2
 
-
 ---
 
-![Landscape](img/zf2.png)
+#![Landscape](img/zf2.png)
 
 
