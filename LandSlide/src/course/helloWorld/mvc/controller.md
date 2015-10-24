@@ -29,14 +29,13 @@ Although the alias allows to use a short class name instead of the full name, it
 
 ##New Class Controller 
 
-- In Zend Framework 2, the controller is a class that is generally called {Controller name}Controller
-- Each action is a public method within the controller class that is named {action name}Action
+In Zend Framework 2, the controller is a class that is generally called {Controller name}Controller
 
 	!php
 	class IndexController extends AbstractActionController
-	{
-	   public function indexAction()
-	   {
-	   }
-	}
+
+Each action is a public method within the controller class that is named {action name}Action
+
+	!php
+	public function indexAction()
 

@@ -17,7 +17,6 @@ This tool gives you the ability to:
 ##Installation using Composer
 
 1 - Open console (command prompt)
-
 2 - Create new document ZFTOOL
 	
 	!sh
