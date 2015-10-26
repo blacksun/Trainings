@@ -1,18 +1,6 @@
 #Controller
 
-##Namespace
 
-When you use classes from different libraries in your program, the class names may conflict.
-
-To achieve the same goal, Zend Framework 2 uses the PHP 5.3 language feature called namespaces.
-The namespaces allow to solve the name collisions between code components, and provide you with the ability to make the long names shorter.
-
-	!php
-	namespace Application\Controller;
-
----
-
-#Controller
 
 ##How use alias
 
@@ -26,6 +14,8 @@ Although the alias allows to use a short class name instead of the full name, it
 ---
 
 #Controller
+
+
 
 ##New Class Controller 
 

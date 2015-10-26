@@ -9,11 +9,18 @@ p, li {
     line-height: 1.5em;
 }
 
-body,
-.slides,
+body{
+  background:url("css/Blu-BKGD.jpg") no-repeat scroll ;
+}
+.slides{
+    background:url("css/gsc.png") no-repeat scroll 0 625px #444;
+    box-shadow: 1px 1px 15px #333;
+    color: #FFFFFF;
+     
+}
 .slide.current {
     color: #FFFFFF;
-    background-color: #69A8C2;
+    background-color: transparent;
 }
 
 div.slide h1,

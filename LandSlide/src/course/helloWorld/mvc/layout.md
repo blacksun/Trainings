@@ -1,5 +1,7 @@
 # Layout
 
+
+
 Pages of your web site typically have some common structure that can be shared among them. For example, a typical page has the <!DOCTYPE> declaration to identify the HTML document, and the <head> and <body> elements:
 
 	!html
@@ -17,6 +19,8 @@ Pages of your web site typically have some common structure that can be shared a
 ---
 
 # Layout
+
+
 
 In the Skeleton Application, the default layout template file is called layout.phtml and is located inside of the view/layout directory in Application module’s directory
 
@@ -40,6 +44,8 @@ In the Skeleton Application, the default layout template file is called layout.p
 
 #Layout
 
+
+
 Let’s look at the layout.phtml template file in more details.
 
 	!php 
@@ -59,6 +65,8 @@ headTitle we have the HeadTitle view helper that allows to define the title for 
 
 #Layout
 
+
+
 	!php
 	echo $this->headMeta()
         ->appendName('viewport', 'width=device-width, initial-scale=1.0')
@@ -69,6 +77,9 @@ The HeadMeta view helper allows to define the <meta name="viewport"> tag contain
 ---
 
 #Layout
+
+
+
 	!php
 	echo $this->headLink(array('rel' => 'shortcut icon', 
                 'type' => 'image/vnd.microsoft.icon', 
@@ -85,6 +96,8 @@ The stylesheets common to all site pages are included by the prependStylesheet()
 
 #Layout
 
+
+
 	!php
 	echo $this->headScript()
        ->prependFile($this->basePath().'/js/bootstrap.min.js')
@@ -100,6 +113,8 @@ $this->headScript include the JavaScript files that all your web pages will load
 ---
 
 #Layout
+
+
 
 	!php
 	echo $this->content()

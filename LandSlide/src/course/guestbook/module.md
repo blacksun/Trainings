@@ -4,21 +4,37 @@
 
 #Add new module guestbook
 
-## Use Zftool
 
-	!sh
-	$ php zf.php create module guestbook path/to/zf2-project
+
+## Use Zend Studio
+
+![Landscape](../../img/newModule.png)
+
 ---
 
 #Add new module guestbook
 
+
+
 ## Use Zend Studio
 
-![Landscape](../../img/addmodule.png)
+![Landscape](../../img/newModule2.png)
+
+---
+
+#Add new module guestbook
+
+
+
+## Use Zend Studio
+
+![Landscape](../../img/newModule3.png)
 
 ---
 
 #Create new controller
+
+
 
 	!php
 	namespace Guestbook\Controller;
@@ -32,6 +48,8 @@
 ---
 
 #Configure Route
+
+
 
 	!php
 	return array(
@@ -60,6 +78,8 @@
 
 #Active View
 
+
+
 ## View Manager
 
 In module/Guestbook/config/module.config.php file :
@@ -74,6 +94,8 @@ In module/Guestbook/config/module.config.php file :
 ---
 
 #Active View
+
+
 
 ## Use View Model
 
@@ -98,6 +120,8 @@ Finaly add new file module/Guestbook/view/guestbook/index/index.phtml
 ---
 
 #Use theme
+
+
 
 Add css and js files in public/
 

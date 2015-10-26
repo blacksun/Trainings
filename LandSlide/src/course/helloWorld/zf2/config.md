@@ -1,5 +1,7 @@
 #Global Configuration
 
+
+
 	!php
 	return array(
 	    // This should be an array of module namespaces used in the application.
@@ -11,6 +13,8 @@
 ---
 
 #Global Configuration
+
+
 
 	!php
 	return array(
@@ -29,6 +33,8 @@
 ---
 
 #Global Configuration
+
+
 
 	!php
 	return array(

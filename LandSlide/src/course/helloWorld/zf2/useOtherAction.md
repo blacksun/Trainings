@@ -1,5 +1,7 @@
 #Use new Action (Hello world)
 
+
+
 ##Add new action
 
 	!php
@@ -10,6 +12,8 @@
 ---
 
 #Use new Action (Hello world)
+
+
 
 ##Use Model View to send data
 
@@ -24,6 +28,8 @@
 
 #Use new Action (Hello world)
 
+
+
 ##Display "Hello World" in the page
 
 	!php
@@ -39,6 +45,8 @@
 
 #Use new Action (Hello world)
 
+
+
 ##Display "Hello World" in the page
 
 	!php
@@ -50,7 +58,7 @@
 		));
 	}
 
-And now in the script view hello.phtml:
+Add now in the script view hello.phtml:
 
 	!html
 	<h1><?php echo $this->message; ?></h1>

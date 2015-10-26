@@ -4,18 +4,7 @@
 
 # INSTALL ZF2
 
-## Create Zend Skeleton Using zftool 
 
-This command installs the ZendSkeletonApplication in the specified path.
-
-	!sh
-	$ zf.php create project project/zf2/path 
-
- <path> The path of the project to be created
-
----
-
-# INSTALL ZF2
 
 ## Create Zend Skeleton Using Zend Studio (Step 1)
 
@@ -25,6 +14,8 @@ This command installs the ZendSkeletonApplication in the specified path.
 
 # INSTALL ZF2
 
+
+
 ## Create Zend Skeleton Using Zend Studio (Step 2)
 
 ![Landscape](../../../img/renameProject.png)
@@ -32,6 +23,8 @@ This command installs the ZendSkeletonApplication in the specified path.
 ---
 
 # INSTALL ZF2
+
+
 
 ## Create Zend Skeleton Using Zend Studio (Step 3)
 
