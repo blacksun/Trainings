@@ -20,17 +20,12 @@ This tool gives you the ability to:
 2 - Create new document ZFTOOL
 	
 	!sh
-	$ mkadir ZFTOOL
-    
-3 -Download composer.phar 
-
-	!sh
-	$ curl -s http://getcomposer.org/installer | php
+	$ mkdir ZFTOOL
 
 4 -Install zftool 
 
 	!sh
-	$ php composer.phar require zendframework/zftool:dev-master
+	$ composer require zendframework/zftool:dev-master
  	
 zf.php (Zend Tool) will be installed in the vendor/bin folder. 
 

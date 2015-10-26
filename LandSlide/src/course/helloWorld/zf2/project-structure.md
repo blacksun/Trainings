@@ -1,9 +1,9 @@
-#Structure project
+#Project Structure - Global
 
 ![Landscape](../../../img/structure.png)
 
 ---
 
-#Structure project
+#Project Structure - Module
 
 ![Landscape](../../../img/nameModule.jpg)
