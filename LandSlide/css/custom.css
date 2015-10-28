@@ -36,7 +36,6 @@ div.slide h4,
 div.slide h5,
 div.slide h6 {
     color: #3E6478;
-    font-weight: bold;
 }
 
 div.slide h1 {
@@ -48,6 +47,10 @@ div.slide h1 {
 }
 
 .slide header:only-child h1 {
+    font-size: 100px;
+}
+
+.slide header h1 {
     font-size: 70px;
 }
 
