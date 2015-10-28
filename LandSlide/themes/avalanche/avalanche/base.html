@@ -181,7 +181,12 @@
   <script src="{{ js.path_url }}"></script>
   {% endif %}
   {% endfor %}
-
+  <script>
+    // Let's get the party started!
+    $().landslide();
+    // Enable page number by default
+    $('.page_number').toggle();
+  </script>
   <a href="https://github.com/blacksun/ZF2TrainingMaterial"><img style="position: absolute; top: 0; right: 0; border: 0; border-radius: none; box-shadow: none;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
 </body>
 </html>
