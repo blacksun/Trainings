@@ -4,8 +4,6 @@
 
 #Add new module guestbook
 
-
-
 ## Use Zend Studio
 
 ![Landscape](../../img/newModule.png)
@@ -13,8 +11,6 @@
 ---
 
 #Add new module guestbook
-
-
 
 ## Use Zend Studio
 
@@ -24,8 +20,6 @@
 
 #Add new module guestbook
 
-
-
 ## Use Zend Studio
 
 ![Landscape](../../img/newModule3.png)
@@ -33,8 +27,6 @@
 ---
 
 #Create new controller
-
-
 
 	!php
 	namespace Guestbook\Controller;
@@ -48,8 +40,6 @@
 ---
 
 #Configure Route
-
-
 
 	!php
 	return array(
@@ -95,8 +85,6 @@ In module/Guestbook/config/module.config.php file :
 
 #Active View
 
-
-
 ## Use View Model
 
 In module/Guestbook/src/Guestbook/Controller/IndexController.php file :
@@ -120,8 +108,6 @@ Finaly add new file module/Guestbook/view/guestbook/index/index.phtml
 ---
 
 #Use theme
-
-
 
 Add css and js files in public/
 
@@ -147,10 +133,82 @@ Fixed the header and footer in Layout.phtml like this (example menu):
 	<div id="footer">
 		<p>2012. Untitled. All rights reserved. Design by</p>
 	</div>
+	
 ---
 
-#create a new action and new view book.phtml
+#Action and View
+
+##Action
+	
+	!php
+	public function bookAction()
+	{
+		return new ViewModel();
+	}
 
 ---
 
-#configure router and use link with zf
+#Action and View
+
+##Action
+	
+	!php
+	public function bookAction()
+	{
+		return new ViewModel();
+	}
+	
+##View
+	
+	!html
+	<div id="wrapper">
+		<div id="page">Second page </div> 
+	</div>
+	
+---
+
+#Use new Action and View
+
+##Router
+
+In the first time we need to configure our router in Guestbook/config/module.config.php
+
+	!php
+	'book' => array(
+		'type' => 'literal',
+		'options' => array(
+			'route' => '/book',
+			'defaults' => array(
+			'controller' => 'guestbook-index',
+			'action' => 'book',
+			),
+		),
+	),
+
+---
+
+#Use new Action and View
+
+##Link
+
+	!html
+    <a href="<?php echo $this->url('book', array('action' => 'book')); ?>">
+    Guest book
+    </a>
+
+---
+
+#Use new Action and View
+
+##Link
+
+	!html
+    <a href="<?php echo $this->url('book', array('action' => 'book')); ?>">
+    Guest book
+    </a>
+
+##Link with params
+
+	!php 
+	echo $this->url('book', array('action' => 'book'), 'parm' =>value);
+	
