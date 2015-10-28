@@ -13,8 +13,14 @@ body{
   background:url("css/Blu-BKGD.jpg") no-repeat scroll ;
 }
 .slides{
-    background:url("css/gsc.png") no-repeat scroll 0 625px #444;
-    box-shadow: 1px 1px 15px #333;
+	background: #444;
+	background: url("css/gsc.png") no-repeat 0 636px, -moz-linear-gradient(top, #444 0%, #aaa 100%);
+	background: url("css/gsc.png") no-repeat 0 636px, -webkit-gradient(linear, 0% 0%,0% 100%, from(#444), to(#aaa));
+	background: url("css/gsc.png") no-repeat 0 636px, -webkit-linear-gradient(top, #444 0%,#aaa 100%);
+	background: url("css/gsc.png") no-repeat 0 636px, -o-linear-gradient(top, #444 0%,#aaa 100%);
+	background: url("css/gsc.png") no-repeat 0 636px, -ms-linear-gradient(top, #444 0%,#aaa 100%);
+	background: url("css/gsc.png") no-repeat 0 636px, linear-gradient(top, #444 0%,#aaa 100%);
+    box-shadow: 1px 1px 20px #333;
     color: #FFFFFF;
      
 }
