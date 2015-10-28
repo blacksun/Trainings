@@ -1,11 +1,12 @@
-#Project Structure - Global
+#Project Structure
 
-
+## Global
 ![Landscape](../../../img/structure.png)
 
 ---
 
-#Project Structure - Module
+#Project Structure 
 
+## Module
 
 ![Landscape](../../../img/nameModule.jpg)

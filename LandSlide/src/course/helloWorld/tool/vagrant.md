@@ -1,19 +1,17 @@
 # Vagrant
 
+- Tool for building and distributing development environments.
+- Runs on Windows, Mac OS X and Linux main distribs
+- Development environments managed by Vagrant can run 
+    - on local virtualized platforms such as VirtualBox or VMware, 
+    - in the cloud via AWS or OpenStack, 
+    - in containers such as Docker or raw LXC.
+---
 
+# Vagrant Philosophy
 
-Vagrant is a tool for building and distributing development environments.
+- Wrapper around virtualization software and configuration management software 
+    - like Ansible, Chef, Puppet.
 
-## How use vagrant
+- Source can be mantained on host, server is provisioned on the virtualized environment
 
-To build the first virtual environment:
-
-	!sh
-	vagrant init ubuntu/trusty64
-	vagrant up
-	
-## How configure the virtual machine
-
-We'll just setup our basic project, and we'll do so using a shell script. 
-
-(view example hello world) 
