@@ -20,8 +20,6 @@ body{
 	background: url("css/gsc.png") no-repeat 0 656px, -o-linear-gradient(top, #444 0%,#aaa 100%);
 	background: url("css/gsc.png") no-repeat 0 656px, -ms-linear-gradient(top, #444 0%,#aaa 100%);
 	background: url("css/gsc.png") no-repeat 0 656px, linear-gradient(top, #444 0%,#aaa 100%);
-
-	background-size: 345px auto;
     box-shadow: 1px 1px 20px #333;
     color: #FFFFFF;
      
