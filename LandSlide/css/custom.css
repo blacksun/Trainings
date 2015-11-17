@@ -10,18 +10,11 @@ p, li {
 }
 
 body{
-  background:url("css/Blu-BKGD.jpg") no-repeat scroll ;
+  background:#FFFFFF ;
 }
 .slides{
-	background: #444;
-	background: url("css/gsc.png") no-repeat 0 656px, -moz-linear-gradient(top, #444 0%, #aaa 100%);
-	background: url("css/gsc.png") no-repeat 0 656px, -webkit-gradient(linear, 0% 0%,0% 100%, from(#444), to(#aaa));
-	background: url("css/gsc.png") no-repeat 0 656px, -webkit-linear-gradient(top, #444 0%,#aaa 100%);
-	background: url("css/gsc.png") no-repeat 0 656px, -o-linear-gradient(top, #444 0%,#aaa 100%);
-	background: url("css/gsc.png") no-repeat 0 656px, -ms-linear-gradient(top, #444 0%,#aaa 100%);
-	background: url("css/gsc.png") no-repeat 0 656px, linear-gradient(top, #444 0%,#aaa 100%);
-    box-shadow: 1px 1px 20px #333;
     color: #FFFFFF;
+	box-shadow : 0 0 20px #222;
      
 }
 .slide.current {

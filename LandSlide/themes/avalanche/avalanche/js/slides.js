@@ -58,7 +58,73 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             for (i=state.currentSlide+2; i<$('.slide').length+1; i++) {
                 getSlide(i).addClass('far-future');
             }
-
+            //zoom tools
+            if (state.currentSlide == 8 || state.currentSlide == 9 || state.currentSlide == 10 || 
+            	state.currentSlide == 11 || state.currentSlide == 17 || state.currentSlide == 18 ||
+                state.currentSlide == 19 || state.currentSlide == 20 || state.currentSlide == 21) {
+            	$('.slides').css(
+                		'background' , ' -moz-linear-gradient(top, #444 0%, #555 100%)'
+                	);
+                	$('.slides').css(
+                    		'background' , ' -webkit-linear-gradient(top, #444 0%, #555 100%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -o-linear-gradient(top, #444 0%, #555 100%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -ms-linear-gradient(top, #444 0%, #555 100%)'
+                    );
+            }
+            //zoom php
+            else if (state.currentSlide == 29 || state.currentSlide == 30 ||
+            		 state.currentSlide == 31 || state.currentSlide == 32) {
+            	    $('.slides').css(
+                		'background' , ' -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                	);
+                	$('.slides').css(
+                    		'background' , ' -webkit-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -o-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -ms-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                    );
+            }
+            //zoom MVC
+            else if (state.currentSlide == 22 || state.currentSlide == 23 || state.currentSlide == 24 ||
+                     state.currentSlide == 25 || state.currentSlide == 41 || state.currentSlide == 42 || 
+                     state.currentSlide == 43 || state.currentSlide == 44 || state.currentSlide == 45 || 
+                     state.currentSlide == 46 || state.currentSlide == 47 || state.currentSlide == 48 || 
+                     state.currentSlide == 49) {
+            	$('.slides').css(
+                		'background' , ' -moz-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                	);
+                	$('.slides').css(
+                    		'background' , ' -webkit-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -o-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -ms-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                    );
+            }
+            //zoom ZF2
+            else {
+            	$('.slides').css(
+                		'background' , ' -moz-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                	);
+                	$('.slides').css(
+                    		'background' , ' -webkit-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -o-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                    );
+                	$('.slides').css(
+                    		'background' , ' -ms-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                    );
+            }
             // Update active ToC row
             $('#toc tr').removeClass('active');
             $('#toc-row-'+state.currentSlide).addClass('active');
