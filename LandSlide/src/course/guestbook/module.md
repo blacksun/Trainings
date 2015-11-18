@@ -66,7 +66,7 @@
 
 ---
 
-#Active View
+#Activate View
 
 
 
@@ -83,7 +83,7 @@ In module/Guestbook/config/module.config.php file :
 
 ---
 
-#Active View
+#Activate View
 
 ## Use View Model
 
@@ -107,7 +107,7 @@ Finaly add new file module/Guestbook/view/guestbook/index/index.phtml
 
 ---
 
-#Use theme
+# Use theme
 
 Add css and js files in public/
 
@@ -133,82 +133,49 @@ Fixed the header and footer in Layout.phtml like this (example menu):
 	<div id="footer">
 		<p>2012. Untitled. All rights reserved. Design by</p>
 	</div>
-	
 ---
 
-#Action and View
+# Recovering data
 
-##Action
+## Use Service Layer
+
+![Landscape](../../img/ServiceLayerSketch.gif)
+
+
+---
+
+# Recovering data
+
+## Use Service Layer
+
+    !php
+    public function indexAction()
+    {
+        $entryService = new Guestbook\Service\Entry();
+        return ['entries' => $entryService->getLasts()];
+    }
+
+---
+
+# Recovering data
+
+## Service class
 	
 	!php
-	public function bookAction()
+	namespace Guestbook\Service;
+	class Entry
 	{
-		return new ViewModel();
+	    public function getLasts()
+	    {
+	        $entries = [];
+	        $entry = new \stdClass();
+	        $entry->message = "Ceci n'est pas un message";
+	        $entry->date = "May 15, 2012";
+	        $entry->author = 'Gabriele Santini';
+	        $entries[] = $entry;
+	        $entries[] = $entry;
+	        $entries[] = $entry;
+	        
+	        return $entries;
+	    }
 	}
-
----
-
-#Action and View
-
-##Action
-	
-	!php
-	public function bookAction()
-	{
-		return new ViewModel();
-	}
-	
-##View
-	
-	!html
-	<div id="wrapper">
-		<div id="page">Second page </div> 
-	</div>
-	
----
-
-#Use new Action and View
-
-##Router
-
-In the first time we need to configure our router in Guestbook/config/module.config.php
-
-	!php
-	'book' => array(
-		'type' => 'literal',
-		'options' => array(
-			'route' => '/book',
-			'defaults' => array(
-			'controller' => 'guestbook-index',
-			'action' => 'book',
-			),
-		),
-	),
-
----
-
-#Use new Action and View
-
-##Link
-
-	!html
-    <a href="<?php echo $this->url('book', array('action' => 'book')); ?>">
-    Guest book
-    </a>
-
----
-
-#Use new Action and View
-
-##Link
-
-	!html
-    <a href="<?php echo $this->url('book', array('action' => 'book')); ?>">
-    Guest book
-    </a>
-
-##Link with params
-
-	!php 
-	echo $this->url('book', array('action' => 'book'), 'parm' =>value);
-	

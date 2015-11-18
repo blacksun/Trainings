@@ -1,5 +1,5 @@
 while [ 1 ]; do
     clear
-    landslide course.cfg
+    landslide index.cfg
     sleep 4
 done;

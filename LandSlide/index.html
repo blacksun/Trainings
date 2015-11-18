@@ -1311,7 +1311,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              1/74
+              1/80
             </aside>
           </footer>
         </div>
@@ -1344,7 +1344,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              2/74
+              2/80
             </aside>
           </footer>
         </div>
@@ -1387,7 +1387,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              3/74
+              3/80
             </aside>
           </footer>
         </div>
@@ -1430,7 +1430,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              4/74
+              4/80
             </aside>
           </footer>
         </div>
@@ -1472,7 +1472,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              5/74
+              5/80
             </aside>
           </footer>
         </div>
@@ -1514,7 +1514,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              6/74
+              6/80
             </aside>
           </footer>
         </div>
@@ -1557,7 +1557,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              7/74
+              7/80
             </aside>
           </footer>
         </div>
@@ -1598,7 +1598,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              8/74
+              8/80
             </aside>
           </footer>
         </div>
@@ -1640,7 +1640,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              9/74
+              9/80
             </aside>
           </footer>
         </div>
@@ -1685,7 +1685,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              10/74
+              10/80
             </aside>
           </footer>
         </div>
@@ -1727,7 +1727,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              11/74
+              11/80
             </aside>
           </footer>
         </div>
@@ -1757,7 +1757,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              12/74
+              12/80
             </aside>
           </footer>
         </div>
@@ -1797,7 +1797,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              13/74
+              13/80
             </aside>
           </footer>
         </div>
@@ -1830,7 +1830,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              14/74
+              14/80
             </aside>
           </footer>
         </div>
@@ -1863,7 +1863,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              15/74
+              15/80
             </aside>
           </footer>
         </div>
@@ -1896,7 +1896,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              16/74
+              16/80
             </aside>
           </footer>
         </div>
@@ -1936,7 +1936,7 @@ div.slide h6 {
             </aside>
             
             <aside class="page_number">
-              17/74
+              17/80
             </aside>
           </footer>
         </div>
@@ -1984,7 +1984,7 @@ $ composer require zendframework/zftool:dev-master</p>
             </aside>
             
             <aside class="page_number">
-              18/74
+              18/80
             </aside>
           </footer>
         </div>
@@ -2026,7 +2026,7 @@ $ zftool.phar</p>
             </aside>
             
             <aside class="page_number">
-              19/74
+              19/80
             </aside>
           </footer>
         </div>
@@ -2063,7 +2063,7 @@ $ zftool.phar</p>
             </aside>
             
             <aside class="page_number">
-              20/74
+              20/80
             </aside>
           </footer>
         </div>
@@ -2099,7 +2099,7 @@ $ zftool.phar</p>
             </aside>
             
             <aside class="page_number">
-              21/74
+              21/80
             </aside>
           </footer>
         </div>
@@ -2132,7 +2132,7 @@ $ zftool.phar</p>
             </aside>
             
             <aside class="page_number">
-              22/74
+              22/80
             </aside>
           </footer>
         </div>
@@ -2165,7 +2165,7 @@ $ zftool.phar</p>
             </aside>
             
             <aside class="page_number">
-              23/74
+              23/80
             </aside>
           </footer>
         </div>
@@ -2204,7 +2204,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              24/74
+              24/80
             </aside>
           </footer>
         </div>
@@ -2219,13 +2219,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Secure cli calls</h2>
-<div class="highlight"><pre><span class="x">if (php_sapi_name() === &#39;cli-server&#39;) {</span>
-<span class="x">$path = realpath(__DIR__ . parse_url($_SERVER[&#39;REQUEST_URI&#39;], PHP_URL_PATH));</span>
-<span class="x">if (__FILE__ !== $path &amp;&amp; is_file($path)) {</span>
-<span class="x">  return false;</span>
-<span class="x">}</span>
-<span class="x">unset($path);</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nb">php_sapi_name</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;cli-server&#39;</span><span class="p">)</span> <span class="p">{</span>
+<span class="nv">$path</span> <span class="o">=</span> <span class="nb">realpath</span><span class="p">(</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nb">parse_url</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_URI&#39;</span><span class="p">],</span> <span class="nx">PHP_URL_PATH</span><span class="p">));</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">__FILE__</span> <span class="o">!==</span> <span class="nv">$path</span> <span class="o">&amp;&amp;</span> <span class="nb">is_file</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nb">unset</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -2245,7 +2245,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              25/74
+              25/80
             </aside>
           </footer>
         </div>
@@ -2260,7 +2260,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Setup autoloading</h2>
-<div class="highlight"><pre><span class="x">require &#39;init_autoloader.php&#39;;</span>
+<div class="highlight"><pre><span class="k">require</span> <span class="s1">&#39;init_autoloader.php&#39;</span><span class="p">;</span>
 </pre></div>
 </section>
             
@@ -2280,7 +2280,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              26/74
+              26/80
             </aside>
           </footer>
         </div>
@@ -2295,7 +2295,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Zend\Mvc\Application</h2>
-<div class="highlight"><pre><span class="x">Zend\Mvc\Application::init(require &#39;config/application.config.php&#39;)-&gt;run();</span>
+<div class="highlight"><pre><span class="nx">Zend\Mvc\Application</span><span class="o">::</span><span class="na">init</span><span class="p">(</span><span class="k">require</span> <span class="s1">&#39;config/application.config.php&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span>
 </pre></div>
 </section>
             
@@ -2315,7 +2315,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              27/74
+              27/80
             </aside>
           </footer>
         </div>
@@ -2347,7 +2347,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              28/74
+              28/80
             </aside>
           </footer>
         </div>
@@ -2361,12 +2361,12 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Global Configuration</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">    // This should be an array of module namespaces used in the application.</span>
-<span class="x">    &#39;modules&#39; =&gt; array(</span>
-<span class="x">        &#39;Application&#39;,</span>
-<span class="x">    ),</span>
-<span class="x">);</span>
+            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// This should be an array of module namespaces used in the application.</span>
+    <span class="s1">&#39;modules&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;Application&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">);</span>
 </pre></div>
 </section>
             
@@ -2386,7 +2386,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              29/74
+              29/80
             </aside>
           </footer>
         </div>
@@ -2400,18 +2400,18 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Global Configuration</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">    // This should be an array of module namespaces used in the application.</span>
-<span class="x">    &#39;modules&#39; =&gt; array(</span>
-<span class="x">        &#39;Application&#39;,</span>
-<span class="x">    ),</span>
-<span class="x">    &#39;module_listener_options&#39; =&gt; array(</span>
-<span class="x">        &#39;module_paths&#39; =&gt; array(</span>
-<span class="x">            &#39;./module&#39;,</span>
-<span class="x">            &#39;./vendor&#39;,</span>
-<span class="x">        ),</span>
-<span class="x">    ),</span>
-<span class="x">);</span>
+            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// This should be an array of module namespaces used in the application.</span>
+    <span class="s1">&#39;modules&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;Application&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;module_listener_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;module_paths&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;./module&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;./vendor&#39;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">);</span>
 </pre></div>
 </section>
             
@@ -2431,7 +2431,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              30/74
+              30/80
             </aside>
           </footer>
         </div>
@@ -2445,21 +2445,21 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Global Configuration</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">    // This should be an array of module namespaces used in the application.</span>
-<span class="x">    &#39;modules&#39; =&gt; array(</span>
-<span class="x">        &#39;Application&#39;,</span>
-<span class="x">    ),</span>
-<span class="x">    &#39;module_listener_options&#39; =&gt; array(</span>
-<span class="x">        &#39;module_paths&#39; =&gt; array(</span>
-<span class="x">            &#39;./module&#39;,</span>
-<span class="x">            &#39;./vendor&#39;,</span>
-<span class="x">        ),</span>
-<span class="x">        &#39;config_glob_paths&#39; =&gt; array(</span>
-<span class="x">            &#39;config/autoload/{{,*.}global,{,*.}local}.php&#39;,</span>
-<span class="x">        ),</span>
-<span class="x">    ),</span>
-<span class="x">);</span>
+            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+    <span class="c1">// This should be an array of module namespaces used in the application.</span>
+    <span class="s1">&#39;modules&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;Application&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;module_listener_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;module_paths&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;./module&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;./vendor&#39;</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="s1">&#39;config_glob_paths&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;config/autoload/{{,*.}global,{,*.}local}.php&#39;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">);</span>
 </pre></div>
 </section>
             
@@ -2479,7 +2479,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              31/74
+              31/80
             </aside>
           </footer>
         </div>
@@ -2497,7 +2497,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
 <p>When you use classes from different libraries in your program, the class names may conflict.</p>
 <p>To achieve the same goal, Zend Framework 2 uses the PHP 5.3 language feature called namespaces.</p>
 <p>The namespaces allow to solve the name collisions between code components, and provide you with the ability to make the long names shorter.</p>
-<div class="highlight"><pre><span class="x">namespace Application;</span>
+<div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Application</span><span class="p">;</span>
 </pre></div>
 </section>
             
@@ -2517,7 +2517,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              32/74
+              32/80
             </aside>
           </footer>
         </div>
@@ -2532,10 +2532,10 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Get Configure</h2>
-<div class="highlight"><pre><span class="x">public function getConfig()</span>
-<span class="x">{</span>
-<span class="x">    return include __DIR__ . &#39;/config/module.config.php&#39;;</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">getConfig</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="k">include</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config/module.config.php&#39;</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -2555,7 +2555,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              33/74
+              33/80
             </aside>
           </footer>
         </div>
@@ -2570,16 +2570,16 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Get Autoloader Configure</h2>
-<div class="highlight"><pre><span class="x">public function getAutoloaderConfig()</span>
-<span class="x">{</span>
-<span class="x">    return array(</span>
-<span class="x">        &#39;Zend\Loader\StandardAutoloader&#39; =&gt; array(</span>
-<span class="x">            &#39;namespaces&#39; =&gt; array(</span>
-<span class="x">                __NAMESPACE__ =&gt; __DIR__ . &#39;/src/&#39; . __NAMESPACE__,</span>
-<span class="x">            ),</span>
-<span class="x">        ),</span>
-<span class="x">    );</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">getAutoloaderConfig</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;Zend\Loader\StandardAutoloader&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;namespaces&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                <span class="nx">__NAMESPACE__</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/src/&#39;</span> <span class="o">.</span> <span class="nx">__NAMESPACE__</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -2599,7 +2599,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              34/74
+              34/80
             </aside>
           </footer>
         </div>
@@ -2615,7 +2615,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>How use alias</h2>
 <p>It's also possible to use the alias (short name for the class) with the help of PHP’s use statement:</p>
-<div class="highlight"><pre><span class="x">use Zend\Mvc\Controller\AbstractActionController;</span>
+<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\Mvc\Controller\AbstractActionController</span><span class="p">;</span>
 </pre></div>
 
 <p>Although the alias allows to use a short class name instead of the full name, its usage is optional. You are not required to always use aliases, and can refer the class by its full name.</p></section>
@@ -2636,7 +2636,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              35/74
+              35/80
             </aside>
           </footer>
         </div>
@@ -2652,11 +2652,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>New Class Controller</h2>
 <p>In Zend Framework 2, the controller is a class that is generally called {Controller name}Controller</p>
-<div class="highlight"><pre><span class="x">class IndexController extends AbstractActionController</span>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">AbstractActionController</span>
 </pre></div>
 
 <p>Each action is a public method within the controller class that is named {action name}Action</p>
-<div class="highlight"><pre><span class="x">public function indexAction()</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
 </pre></div>
 </section>
             
@@ -2676,7 +2676,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              36/74
+              36/80
             </aside>
           </footer>
         </div>
@@ -2719,7 +2719,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              37/74
+              37/80
             </aside>
           </footer>
         </div>
@@ -2763,7 +2763,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              38/74
+              38/80
             </aside>
           </footer>
         </div>
@@ -2778,20 +2778,20 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><p>In the Skeleton Application, the default layout template file is called layout.phtml and is located inside of the view/layout directory in Application module’s directory</p>
-<div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">    &#39;view_manager&#39; =&gt; array(</span>
-<span class="x">    &#39;template_map&#39; =&gt; array(</span>
-<span class="x">        &#39;application/index/index&#39; =&gt; __DIR__ .  &#39;/../view/application/index/index.phtml&#39;,</span>
-<span class="x">        &#39;site/layout&#39;             =&gt; __DIR__ . &#39;/../view/layout/layout.phtml&#39;,</span>
-<span class="x">        &#39;error/index&#39;             =&gt; __DIR__ . &#39;/../view/error/index.phtml&#39;,</span>
-<span class="x">        &#39;error/404&#39;               =&gt; __DIR__ . &#39;/../view/error/404.phtml&#39;,</span>
-<span class="x">    ),</span>
-<span class="x">    &#39;template_path_stack&#39; =&gt; array(</span>
-<span class="x">        &#39;application&#39; =&gt; __DIR__ . &#39;/../view&#39;,</span>
-<span class="x">    ),</span>
-<span class="x">    &#39;layout&#39; =&gt; &#39;site/layout&#39;,</span>
-<span class="x">    ),</span>
-<span class="x">);</span>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;view_manager&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;template_map&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;application/index/index&#39;</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span>  <span class="s1">&#39;/../view/application/index/index.phtml&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;site/layout&#39;</span>             <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view/layout/layout.phtml&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;error/index&#39;</span>             <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view/error/index.phtml&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;error/404&#39;</span>               <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view/error/404.phtml&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;template_path_stack&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;application&#39;</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;layout&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;site/layout&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">);</span>
 </pre></div>
 </section>
             
@@ -2811,7 +2811,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              39/74
+              39/80
             </aside>
           </footer>
         </div>
@@ -2826,10 +2826,10 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><p>Let’s look at the layout.phtml template file in more details.</p>
-<div class="highlight"><pre><span class="x">echo $this-&gt;headTitle(&#39;ZF2 &#39;. </span>
-<span class="x">      $this-&gt;translate(&#39;Skeleton Application&#39;))</span>
-<span class="x">           -&gt;setSeparator(&#39; - &#39;)</span>
-<span class="x">           -&gt;setAutoEscape(false)</span>
+<div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headTitle</span><span class="p">(</span><span class="s1">&#39;ZF2 &#39;</span><span class="o">.</span> 
+      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">translate</span><span class="p">(</span><span class="s1">&#39;Skeleton Application&#39;</span><span class="p">))</span>
+           <span class="o">-&gt;</span><span class="na">setSeparator</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)</span>
+           <span class="o">-&gt;</span><span class="na">setAutoEscape</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
 </pre></div>
 
 <p>headTitle we have the HeadTitle view helper that allows to define the title for the page (“ZF2 Skeleton Application”).</p></section>
@@ -2850,7 +2850,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              40/74
+              40/80
             </aside>
           </footer>
         </div>
@@ -2864,9 +2864,9 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">echo $this-&gt;headMeta()</span>
-<span class="x">    -&gt;appendName(&#39;viewport&#39;, &#39;width=device-width, initial-scale=1.0&#39;)</span>
-<span class="x">    -&gt;appendHttpEquiv(&#39;X-UA-Compatible&#39;, &#39;IE=edge&#39;)</span>
+            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headMeta</span><span class="p">()</span>
+    <span class="o">-&gt;</span><span class="na">appendName</span><span class="p">(</span><span class="s1">&#39;viewport&#39;</span><span class="p">,</span> <span class="s1">&#39;width=device-width, initial-scale=1.0&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">appendHttpEquiv</span><span class="p">(</span><span class="s1">&#39;X-UA-Compatible&#39;</span><span class="p">,</span> <span class="s1">&#39;IE=edge&#39;</span><span class="p">)</span>
 </pre></div>
 
 <p>The HeadMeta view helper allows to define the <meta name="viewport"> tag containing meta information for the web browser to control layout on different display devices, including mobile browsers.</p></section>
@@ -2887,7 +2887,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              41/74
+              41/80
             </aside>
           </footer>
         </div>
@@ -2901,12 +2901,12 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">echo $this-&gt;headLink(array(&#39;rel&#39; =&gt; &#39;shortcut icon&#39;, </span>
-<span class="x">            &#39;type&#39; =&gt; &#39;image/vnd.microsoft.icon&#39;, </span>
-<span class="x">            &#39;href&#39; =&gt; $this-&gt;basePath().&#39;/img/favicon.ico&#39;))</span>
-<span class="x">    -&gt;prependStylesheet($this-&gt;basePath().&#39;/css/style.css&#39;)</span>
-<span class="x">    -&gt;prependStylesheet($this-&gt;basePath().&#39;/css/bootstrap-theme.min.css&#39;)</span>
-<span class="x">    -&gt;prependStylesheet($this-&gt;basePath().&#39;/css/bootstrap.min.css&#39;)</span>
+            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headLink</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;rel&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;shortcut icon&#39;</span><span class="p">,</span> 
+            <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;image/vnd.microsoft.icon&#39;</span><span class="p">,</span> 
+            <span class="s1">&#39;href&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/img/favicon.ico&#39;</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">prependStylesheet</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/css/style.css&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">prependStylesheet</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/css/bootstrap-theme.min.css&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">prependStylesheet</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/css/bootstrap.min.css&#39;</span><span class="p">)</span>
 </pre></div>
 
 <p>The HeadLink view helper allows to define the <link> tags. With the <link> tags, you typically define the “favicon” for the page (located in APP_DATA\public\img\favicon.ico file) and the CSS stylesheets.</p>
@@ -2928,7 +2928,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              42/74
+              42/80
             </aside>
           </footer>
         </div>
@@ -2942,14 +2942,14 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">echo $this-&gt;headScript()</span>
-<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/bootstrap.min.js&#39;)</span>
-<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/jquery.min.js&#39;)</span>
-<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/respond.min.js&#39;, &#39;text/javascript&#39;\</span>
-<span class="x">, </span>
-<span class="x">                    array(&#39;conditional&#39; =&gt; &#39;lt IE 9&#39;,))</span>
-<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/html5shiv.js&#39;, &#39;text/javascript&#39;, </span>
-<span class="x">                    array(&#39;conditional&#39; =&gt; &#39;lt IE 9&#39;,));</span>
+            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headScript</span><span class="p">()</span>
+   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/bootstrap.min.js&#39;</span><span class="p">)</span>
+   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/jquery.min.js&#39;</span><span class="p">)</span>
+   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/respond.min.js&#39;</span><span class="p">,</span> <span class="s1">&#39;text/javascript&#39;</span><span class="nx">\</span>
+<span class="p">,</span> 
+                    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;conditional&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;lt IE 9&#39;</span><span class="p">,))</span>
+   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/html5shiv.js&#39;</span><span class="p">,</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">,</span> 
+                    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;conditional&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;lt IE 9&#39;</span><span class="p">,));</span>
 </pre></div>
 
 <p>$this-&gt;headScript include the JavaScript files that all your web pages will load. </p></section>
@@ -2970,7 +2970,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              43/74
+              43/80
             </aside>
           </footer>
         </div>
@@ -2984,11 +2984,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">echo $this-&gt;content()</span>
+            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">content</span><span class="p">()</span>
 </pre></div>
 
 <p>this is very important, because this line defines the inline PHP code that represents the page content placeholder we talked about in the beginning of this section. When the ZF2 page renderer evaluates the layout template, it echoes the actual page content here.</p>
-<div class="highlight"><pre><span class="x">$this-&gt;inlineScript()</span>
+<div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">inlineScript</span><span class="p">()</span>
 </pre></div>
 
 <p>This's the placeholder for JavaScript scripts loaded by the concrete page. The InlineScript view helper will substitute here all the scripts you register (about registering JavaScript scripts, you will see it later in this chapter).</p></section>
@@ -3009,7 +3009,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              44/74
+              44/80
             </aside>
           </footer>
         </div>
@@ -3024,9 +3024,9 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Add new action</h2>
-<div class="highlight"><pre><span class="x">public function helloAction()</span>
-<span class="x">{</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -3046,7 +3046,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              45/74
+              45/80
             </aside>
           </footer>
         </div>
@@ -3061,11 +3061,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Use Model View to send data</h2>
-<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
-<span class="x">public function helloAction()</span>
-<span class="x">{</span>
-<span class="x">    return ViewModel();</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nx">ViewModel</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -3085,7 +3085,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              46/74
+              46/80
             </aside>
           </footer>
         </div>
@@ -3100,13 +3100,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Display "Hello World" in the page</h2>
-<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
-<span class="x">public function helloAction()</span>
-<span class="x">{</span>
-<span class="x">    return ViewModel(array(</span>
-<span class="x">        &#39;message&#39; =&gt; &#39;Hello world&#39;</span>
-<span class="x">    ));</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nx">ViewModel</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hello world&#39;</span>
+    <span class="p">));</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -3126,7 +3126,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              47/74
+              47/80
             </aside>
           </footer>
         </div>
@@ -3141,13 +3141,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Display "Hello World" in the page</h2>
-<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
-<span class="x">public function helloAction()</span>
-<span class="x">{</span>
-<span class="x">    return ViewModel(array(</span>
-<span class="x">        &#39;message&#39; =&gt; &#39;Hello world&#39;</span>
-<span class="x">    ));</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nx">ViewModel</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hello world&#39;</span>
+    <span class="p">));</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>Add now in the script view hello.phtml:</p>
@@ -3171,7 +3171,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              48/74
+              48/80
             </aside>
           </footer>
         </div>
@@ -3201,7 +3201,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              49/74
+              49/80
             </aside>
           </footer>
         </div>
@@ -3234,7 +3234,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              50/74
+              50/80
             </aside>
           </footer>
         </div>
@@ -3267,7 +3267,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              51/74
+              51/80
             </aside>
           </footer>
         </div>
@@ -3300,7 +3300,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              52/74
+              52/80
             </aside>
           </footer>
         </div>
@@ -3314,13 +3314,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Create new controller</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">namespace Guestbook\Controller;</span>
-<span class="x">use Zend\Mvc\Controller\AbstractActionController;</span>
-<span class="x">class IndexController extends AbstractActionController</span>
-<span class="x">{</span>
-<span class="x"> public function indexAction()</span>
-<span class="x"> {</span>
-<span class="x">}</span>
+            <section><div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Guestbook\Controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Zend\Mvc\Controller\AbstractActionController</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">AbstractActionController</span>
+<span class="p">{</span>
+ <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+ <span class="p">{</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -3340,7 +3340,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              53/74
+              53/80
             </aside>
           </footer>
         </div>
@@ -3354,27 +3354,27 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Configure Route</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">&#39;router&#39; =&gt; array(</span>
-<span class="x">    &#39;routes&#39; =&gt; array(</span>
-<span class="x">    &#39;guestbook&#39; =&gt; array(</span>
-<span class="x">        &#39;type&#39; =&gt; &#39;literal&#39;,</span>
-<span class="x">            &#39;options&#39; =&gt; array(</span>
-<span class="x">                    &#39;route&#39; =&gt; &#39;/guestbook&#39;,</span>
-<span class="x">                    &#39;defaults&#39; =&gt; array(</span>
-<span class="x">                    &#39;controller&#39; =&gt; &#39;guestbook-index&#39;,</span>
-<span class="x">                    &#39;action&#39; =&gt; &#39;index&#39;,</span>
-<span class="x">                ),</span>
-<span class="x">            ),</span>
-<span class="x">        ),</span>
-<span class="x">    ),</span>
-<span class="x">),</span>
-<span class="x">&#39;controllers&#39; =&gt; array(</span>
-<span class="x">    &#39;invokables&#39; =&gt; array(</span>
-<span class="x">        &#39;guestbook-index&#39; =&gt; &#39;Guestbook\Controller\IndexController&#39;</span>
-<span class="x">        ),</span>
-<span class="x">    ),</span>
-<span class="x">);</span>
+            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+<span class="s1">&#39;router&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;routes&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;guestbook&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;literal&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                    <span class="s1">&#39;route&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/guestbook&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;defaults&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+                    <span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;guestbook-index&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span>
+                <span class="p">),</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">),</span>
+<span class="s1">&#39;controllers&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;invokables&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;guestbook-index&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Guestbook\Controller\IndexController&#39;</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">);</span>
 </pre></div>
 </section>
             
@@ -3394,7 +3394,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              54/74
+              54/80
             </aside>
           </footer>
         </div>
@@ -3405,16 +3405,16 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Active View</h1></header>
+            <header><h1>Activate View</h1></header>
             
             
             <section><h2>View Manager</h2>
 <p>In module/Guestbook/config/module.config.php file :</p>
-<div class="highlight"><pre><span class="x">&#39;view_manager&#39; =&gt; array(</span>
-<span class="x">         &#39;template_path_stack&#39; =&gt; array(</span>
-<span class="x">         &#39;guestbook&#39; =&gt; __DIR__ . &#39;/../view&#39;,</span>
-<span class="x">     ),</span>
-<span class="x"> ),</span>
+<div class="highlight"><pre><span class="s1">&#39;view_manager&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;template_path_stack&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;guestbook&#39;</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view&#39;</span><span class="p">,</span>
+     <span class="p">),</span>
+ <span class="p">),</span>
 </pre></div>
 </section>
             
@@ -3434,7 +3434,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              55/74
+              55/80
             </aside>
           </footer>
         </div>
@@ -3445,16 +3445,16 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Active View</h1></header>
+            <header><h1>Activate View</h1></header>
             
             
             <section><h2>Use View Model</h2>
 <p>In module/Guestbook/src/Guestbook/Controller/IndexController.php file :</p>
-<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
+<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
 </pre></div>
 
 <p>And In IndexAction function we need to add :</p>
-<div class="highlight"><pre><span class="x">return new ViewModel();</span>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">new</span> <span class="nx">ViewModel</span><span class="p">();</span>
 </pre></div>
 
 <p>Finaly add new file module/Guestbook/view/guestbook/index/index.phtml</p>
@@ -3481,7 +3481,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              56/74
+              56/80
             </aside>
           </footer>
         </div>
@@ -3534,7 +3534,40 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              57/74
+              57/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/module.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Recovering data</h1></header>
+            
+            
+            <section><h2>Use Service Layer</h2>
+<p><img alt="Landscape" src="data:image/gif;base64,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" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              58/80
             </aside>
           </footer>
         </div>
@@ -3545,14 +3578,15 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Action and View</h1></header>
+            <header><h1>Recovering data</h1></header>
             
             
-            <section><h2>Action</h2>
-<div class="highlight"><pre><span class="x">public function bookAction()</span>
-<span class="x">{</span>
-<span class="x">    return new ViewModel();</span>
-<span class="x">}</span>
+            <section><h2>Use Service Layer</h2>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$entryService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Guestbook\Service\Entry</span><span class="p">();</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;entries&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entryService</span><span class="o">-&gt;</span><span class="na">getLasts</span><span class="p">()];</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -3572,7 +3606,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             </aside>
             
             <aside class="page_number">
-              58/74
+              59/80
             </aside>
           </footer>
         </div>
@@ -3583,20 +3617,79 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Action and View</h1></header>
+            <header><h1>Recovering data</h1></header>
             
             
-            <section><h2>Action</h2>
-<div class="highlight"><pre><span class="x">public function bookAction()</span>
-<span class="x">{</span>
-<span class="x">    return new ViewModel();</span>
-<span class="x">}</span>
+            <section><h2>Service class</h2>
+<div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Guestbook\Service</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">Entry</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getLasts</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$entries</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="nv">$entry</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\stdClass</span><span class="p">();</span>
+        <span class="nv">$entry</span><span class="o">-&gt;</span><span class="na">message</span> <span class="o">=</span> <span class="s2">&quot;Ceci n&#39;est pas un message&quot;</span><span class="p">;</span>
+        <span class="nv">$entry</span><span class="o">-&gt;</span><span class="na">date</span> <span class="o">=</span> <span class="s2">&quot;May 15, 2012&quot;</span><span class="p">;</span>
+        <span class="nv">$entry</span><span class="o">-&gt;</span><span class="na">author</span> <span class="o">=</span> <span class="s1">&#39;Gabriele Santini&#39;</span><span class="p">;</span>
+        <span class="nv">$entries</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$entry</span><span class="p">;</span>
+        <span class="nv">$entries</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$entry</span><span class="p">;</span>
+        <span class="nv">$entries</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$entry</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="nv">$entries</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              60/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/service-manager.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Service Manager</h1></header>
+            
+            
+            <section><h2>Dependency Injection (DI)</h2>
+<p>from this</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nv">$entryService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Guestbook\Service\Entry</span><span class="p">();</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;entries&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entryService</span><span class="o">-&gt;</span><span class="na">getLasts</span><span class="p">()];</span>
+<span class="p">}</span>
 </pre></div>
 
-<h2>View</h2>
-<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;wrapper&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>Second page <span class="nt">&lt;/div&gt;</span> 
-<span class="nt">&lt;/div&gt;</span>
+<p>to this</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">setEntryService</span><span class="p">(</span><span class="nv">$entryService</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">entryService</span> <span class="o">=</span> <span class="nv">$entryService</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">getEntryService</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">entryService</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;entries&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEntryService</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getLasts</span><span class="p">()];</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -3610,38 +3703,77 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
           <footer>
             
             <aside class="source">
-              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module.md" title="Fork and edit this slide">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/service-manager.md" title="Fork and edit this slide">
                 <i class="fa fa-pencil"></i>
               </a>
             </aside>
             
             <aside class="page_number">
-              59/74
+              61/80
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: src/course/guestbook/module.md -->
+      <!-- slide source: src/course/guestbook/service-manager.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Service Manager</h1></header>
+            
+            
+            <section><h2>What is a Service anyway?</h2>
+<p>Mainly an object instance. Preconfigured (wired).</p>
+<p>It can also be an array (intended: parameters array) </p>
+<h2>IoC Container</h2>
+<p>ZF2's choice is to use extensiviely this component to manage almost all DI issues. </p>
+<p>In framework itself AND in your application. </p>
+<p>The advantage is that all the wiring logic is managed in this one component. It is a container. </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/service-manager.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              62/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/service-manager.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Use new Action and View</h1></header>
+            <header><h1>Service Manager</h1></header>
             
             
-            <section><h2>Router</h2>
-<p>In the first time we need to configure our router in Guestbook/config/module.config.php</p>
-<div class="highlight"><pre><span class="x">&#39;book&#39; =&gt; array(</span>
-<span class="x">    &#39;type&#39; =&gt; &#39;literal&#39;,</span>
-<span class="x">    &#39;options&#39; =&gt; array(</span>
-<span class="x">        &#39;route&#39; =&gt; &#39;/book&#39;,</span>
-<span class="x">        &#39;defaults&#39; =&gt; array(</span>
-<span class="x">        &#39;controller&#39; =&gt; &#39;guestbook-index&#39;,</span>
-<span class="x">        &#39;action&#39; =&gt; &#39;book&#39;,</span>
-<span class="x">        ),</span>
-<span class="x">    ),</span>
-<span class="x">),</span>
+            <section><h2>How does it works?</h2>
+<p>Service Locator pattern:</p>
+<p>You define your services by configuration or by code giving them a name</p>
+<div class="highlight"><pre><span class="p">[</span><span class="s1">&#39;service_manager&#39;</span> <span class="o">=&gt;</span> 
+    <span class="p">[</span><span class="s1">&#39;typeOfService&#39;</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;myService&#39;</span> <span class="o">=&gt;</span> <span class="o">...</span> <span class="p">]</span>
+    <span class="p">]];</span>
+
+<span class="nv">$sm</span><span class="o">-&gt;</span><span class="na">set</span><span class="o">&lt;</span><span class="nx">typeOfService</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;myService&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
+</pre></div>
+
+<p>You recover them later simply calling them by name</p>
+<div class="highlight"><pre><span class="nv">$sm</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;myService&#39;</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -3655,73 +3787,197 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
           <footer>
             
             <aside class="source">
-              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module.md" title="Fork and edit this slide">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/service-manager.md" title="Fork and edit this slide">
                 <i class="fa fa-pencil"></i>
               </a>
             </aside>
             
             <aside class="page_number">
-              60/74
+              63/80
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: src/course/guestbook/module.md -->
+      <!-- slide source: src/course/guestbook/service-manager.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Type of Services</h1></header>
+            
+            
+            <section><h2>Explicit (Services)</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/service-manager.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              64/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/service-manager.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Type of Services</h1></header>
+            
+            
+            <section><h2>Invokables</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/service-manager.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              65/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/service-manager.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Type of Services</h1></header>
+            
+            
+            <section><h2>Factories</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/service-manager.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              66/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/module2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Better Theme Integration</h1></header>
+            
+            
+            <section><h2>Use view helpers</h2>
+<p>Edit layout and include css and js file into project with $this-&gt;headLink() and $this-&gt;headScript()</p>
+<p>Separate header, footer and sidebar in layout.phtml using partials</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module2.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              67/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/module2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Use view helpers</h1></header>
+            
+            
+            <section><h2>Template</h2>
+<p>Use partialLoop in guestbook/index/index.phtml to iterate</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module2.md" title="Fork and edit this slide">
+                <i class="fa fa-pencil"></i>
+              </a>
+            </aside>
+            
+            <aside class="page_number">
+              68/80
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/course/guestbook/module2.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Use new Action and View</h1></header>
+            <header><h1>Use view helpers</h1></header>
             
             
             <section><h2>Link</h2>
-<div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&lt;?php echo $this-&gt;url(&#39;book&#39;, array(&#39;action&#39; =&gt; &#39;book&#39;)); ?&gt;&quot;</span><span class="nt">&gt;</span>
-Guest book
-<span class="nt">&lt;/a&gt;</span>
-</pre></div>
-</section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module.md" title="Fork and edit this slide">
-                <i class="fa fa-pencil"></i>
-              </a>
-            </aside>
-            
-            <aside class="page_number">
-              61/74
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: src/course/guestbook/module.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Use new Action and View</h1></header>
-            
-            
-            <section><h2>Link</h2>
-<div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&lt;?php echo $this-&gt;url(&#39;book&#39;, array(&#39;action&#39; =&gt; &#39;book&#39;)); ?&gt;&quot;</span><span class="nt">&gt;</span>
-Guest book
-<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">url</span><span class="p">(</span><span class="s1">&#39;guestbook&#39;</span><span class="p">);</span>
 </pre></div>
 
 <h2>Link with params</h2>
-<pre><code>!php 
-echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
-</code></pre></section>
+<div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">url</span><span class="p">(</span><span class="s1">&#39;guestbook&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;other&#39;</span><span class="p">),</span> <span class="s1">&#39;param&#39;</span> <span class="o">=&gt;</span> <span class="nx">value</span><span class="p">);</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -3733,13 +3989,13 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
           <footer>
             
             <aside class="source">
-              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module.md" title="Fork and edit this slide">
+              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/module2.md" title="Fork and edit this slide">
                 <i class="fa fa-pencil"></i>
               </a>
             </aside>
             
             <aside class="page_number">
-              62/74
+              69/80
             </aside>
           </footer>
         </div>
@@ -3769,7 +4025,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              63/74
+              70/80
             </aside>
           </footer>
         </div>
@@ -3784,14 +4040,14 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             
             
             <section><h2>global.php</h2>
-<div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">     &#39;db&#39; =&gt; array(</span>
-<span class="x">         &#39;driver&#39; =&gt; &#39;pdo&#39;,</span>
-<span class="x">         &#39;dsn&#39; =&gt; &#39;mysql:dbname=guestbook;host=localhost&#39;,</span>
-<span class="x">         &#39;driver_options&#39; =&gt; array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &quot;SET NAMES &#39;UTF8&#39;&quot;,</span>
-<span class="x">         PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION),</span>
-<span class="x">     ),</span>
-<span class="x"> );</span>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+     <span class="s1">&#39;db&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;driver&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;pdo&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;dsn&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;mysql:dbname=guestbook;host=localhost&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;driver_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span> <span class="o">=&gt;</span> <span class="s2">&quot;SET NAMES &#39;UTF8&#39;&quot;</span><span class="p">,</span>
+         <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">),</span>
+     <span class="p">),</span>
+ <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -3811,7 +4067,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              64/74
+              71/80
             </aside>
           </footer>
         </div>
@@ -3826,23 +4082,23 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             
             
             <section><h2>global.php</h2>
-<div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">     &#39;db&#39; =&gt; array(</span>
-<span class="x">         &#39;driver&#39; =&gt; &#39;pdo&#39;,</span>
-<span class="x">         &#39;dsn&#39; =&gt; &#39;mysql:dbname=guestbook;host=localhost&#39;,</span>
-<span class="x">         &#39;driver_options&#39; =&gt; array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &quot;SET NAMES &#39;UTF8&#39;&quot;,</span>
-<span class="x">         PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION),</span>
-<span class="x">     ),</span>
-<span class="x"> );</span>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+     <span class="s1">&#39;db&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;driver&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;pdo&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;dsn&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;mysql:dbname=guestbook;host=localhost&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;driver_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span> <span class="o">=&gt;</span> <span class="s2">&quot;SET NAMES &#39;UTF8&#39;&quot;</span><span class="p">,</span>
+         <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">),</span>
+     <span class="p">),</span>
+ <span class="p">);</span>
 </pre></div>
 
 <h2>local.php</h2>
-<div class="highlight"><pre><span class="x">return array(</span>
-<span class="x">     &#39;db&#39; =&gt; array(</span>
-<span class="x">         &#39;username&#39; =&gt; &#39;root&#39;,</span>
-<span class="x">         &#39;password&#39; =&gt; &#39;XXX&#39;,</span>
-<span class="x">     ),</span>
-<span class="x"> );</span>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+     <span class="s1">&#39;db&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;username&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;XXX&#39;</span><span class="p">,</span>
+     <span class="p">),</span>
+ <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -3862,7 +4118,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              65/74
+              72/80
             </aside>
           </footer>
         </div>
@@ -3892,7 +4148,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              66/74
+              73/80
             </aside>
           </footer>
         </div>
@@ -3909,11 +4165,11 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             <section><h2>Attributes statement</h2>
 <p>In our example "guestbook" we have five cloumns in table entry</p>
 <p>So in attributes statement we find protected variable relative to those in the table</p>
-<div class="highlight"><pre><span class="x">protected $id;</span>
-<span class="x">protected $name;</span>
-<span class="x">protected $email;</span>
-<span class="x">protected $website;</span>
-<span class="x">protected $message;</span>
+<div class="highlight"><pre><span class="k">protected</span> <span class="nv">$id</span><span class="p">;</span>
+<span class="k">protected</span> <span class="nv">$name</span><span class="p">;</span>
+<span class="k">protected</span> <span class="nv">$email</span><span class="p">;</span>
+<span class="k">protected</span> <span class="nv">$website</span><span class="p">;</span>
+<span class="k">protected</span> <span class="nv">$message</span><span class="p">;</span>
 </pre></div>
 </section>
             
@@ -3933,7 +4189,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              67/74
+              74/80
             </aside>
           </footer>
         </div>
@@ -3950,18 +4206,18 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             <section><h2>Methods statement</h2>
 <p>In the next time we find the setter and getter for these protected attributes</p>
 <p>Example setter function</p>
-<div class="highlight"><pre><span class="x">public function setId($id)</span>
-<span class="x"> {</span>
-<span class="x">     $this-&gt;id = $id;</span>
-<span class="x">     return $this;</span>
-<span class="x"> }</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">setId</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">=</span> <span class="nv">$id</span><span class="p">;</span>
+     <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+ <span class="p">}</span>
 </pre></div>
 
 <p>Example getter function</p>
-<div class="highlight"><pre><span class="x"> public function getId()</span>
-<span class="x"> {</span>
-<span class="x">    return $this-&gt;id;</span>
-<span class="x"> }</span>
+<div class="highlight"><pre> <span class="k">public</span> <span class="k">function</span> <span class="nf">getId</span><span class="p">()</span>
+ <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
+ <span class="p">}</span>
 </pre></div>
 </section>
             
@@ -3981,7 +4237,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              68/74
+              75/80
             </aside>
           </footer>
         </div>
@@ -3997,15 +4253,15 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             
             <section><h2>TableGateway</h2>
 <p>In ZF2 we need to construct a class extends from TableGateway like this example in Guestbook</p>
-<div class="highlight"><pre><span class="x">use Zend\Db\TableGateway\TableGateway;</span>
-<span class="x">class EntryTable extends TableGateway</span>
-<span class="x">{</span>
-<span class="x">     public function findAll()</span>
-<span class="x">     {</span>
-<span class="x">         $resultSet = $this-&gt;select();</span>
-<span class="x">         return $resultSet;</span>
-<span class="x">     }</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\Db\TableGateway\TableGateway</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">EntryTable</span> <span class="k">extends</span> <span class="nx">TableGateway</span>
+<span class="p">{</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">findAll</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="nv">$resultSet</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
+         <span class="k">return</span> <span class="nv">$resultSet</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>the function select() is not declared in our class so absolutely it's from parents class</p></section>
@@ -4026,7 +4282,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              69/74
+              76/80
             </aside>
           </footer>
         </div>
@@ -4043,7 +4299,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             <section><h2>TableGateway</h2>
 <p>Let’s look at the TableGateway class in more details</p>
 <p>The class TableGatway also extends from AbstractTableGateway</p>
-<div class="highlight"><pre><span class="x">class TableGateway extends AbstractTableGateway</span>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">TableGateway</span> <span class="k">extends</span> <span class="nx">AbstractTableGateway</span>
 </pre></div>
 </section>
             
@@ -4063,7 +4319,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              70/74
+              77/80
             </aside>
           </footer>
         </div>
@@ -4080,15 +4336,15 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             <section><h2>TableGateway</h2>
 <p>Let’s look at the TableGateway class in more details</p>
 <p>The class TableGatway also extends from AbstractTableGateway</p>
-<div class="highlight"><pre><span class="x">class TableGateway extends AbstractTableGateway</span>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">TableGateway</span> <span class="k">extends</span> <span class="nx">AbstractTableGateway</span>
 </pre></div>
 
 <p>This class has a construct function let's look in roughly speaking these params</p>
-<div class="highlight"><pre><span class="x">public function __construct($table, </span>
-<span class="x">                            AdapterInterface $adapter,</span>
-<span class="x">                            $features = null,</span>
-<span class="x">                            ResultSetInterface $resultSetPrototype = null,</span>
-<span class="x">                            Sql $sql = null)</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> 
+                            <span class="nx">AdapterInterface</span> <span class="nv">$adapter</span><span class="p">,</span>
+                            <span class="nv">$features</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
+                            <span class="nx">ResultSetInterface</span> <span class="nv">$resultSetPrototype</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
+                            <span class="nx">Sql</span> <span class="nv">$sql</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
 </pre></div>
 </section>
             
@@ -4108,7 +4364,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              71/74
+              78/80
             </aside>
           </footer>
         </div>
@@ -4125,15 +4381,15 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             <section><h2>TableGateway</h2>
 <p>Let’s look at the TableGateway class in more details</p>
 <p>The class TableGatway also extends from AbstractTableGateway</p>
-<div class="highlight"><pre><span class="x">class TableGateway extends AbstractTableGateway</span>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">TableGateway</span> <span class="k">extends</span> <span class="nx">AbstractTableGateway</span>
 </pre></div>
 
 <p>This class has a construct function let's look in roughly speaking these params</p>
-<div class="highlight"><pre><span class="x">public function __construct($table, </span>
-<span class="x">                            AdapterInterface $adapter,</span>
-<span class="x">                            $features = null,</span>
-<span class="x">                            ResultSetInterface $resultSetPrototype = null,</span>
-<span class="x">                            Sql $sql = null)</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> 
+                            <span class="nx">AdapterInterface</span> <span class="nv">$adapter</span><span class="p">,</span>
+                            <span class="nv">$features</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
+                            <span class="nx">ResultSetInterface</span> <span class="nv">$resultSetPrototype</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
+                            <span class="nx">Sql</span> <span class="nv">$sql</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
 </pre></div>
 
 <p>Looking select() function also it's not here so perforce we need to discover yet AbstractTableGateway</p></section>
@@ -4154,7 +4410,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              72/74
+              79/80
             </aside>
           </footer>
         </div>
@@ -4171,20 +4427,20 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             <section><h2>AbstractTableGateway</h2>
 <p>In this class we find many function declared like select(), insert() ..</p>
 <p>In our example : select()</p>
-<div class="highlight"><pre><span class="x">public function select($where = null)</span>
-<span class="x">{</span>
-<span class="x">    if (!$this-&gt;isInitialized) {</span>
-<span class="x">        $this-&gt;initialize();</span>
-<span class="x">    }</span>
-<span class="x">    $select = $this-&gt;sql-&gt;select();</span>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">select</span><span class="p">(</span><span class="nv">$where</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">isInitialized</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">initialize</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="nv">$select</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">sql</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
 
-<span class="x">    if ($where instanceof \Closure) {</span>
-<span class="x">        $where($select);</span>
-<span class="x">    } elseif ($where !== null) {</span>
-<span class="x">        $select-&gt;where($where);</span>
-<span class="x">    }</span>
-<span class="x">    return $this-&gt;selectWith($select);</span>
-<span class="x">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$where</span> <span class="nx">instanceof</span> <span class="nx">\Closure</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$where</span><span class="p">(</span><span class="nv">$select</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$where</span> <span class="o">!==</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$select</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="nv">$where</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">selectWith</span><span class="p">(</span><span class="nv">$select</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -4204,59 +4460,7 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
             </aside>
             
             <aside class="page_number">
-              73/74
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: src/course/guestbook/service-manager.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Service Manager</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              <a href="http://github.com/willdurand-edu/php-slides/edit/master/src/course/guestbook/service-manager.md" title="Fork and edit this slide">
-                <i class="fa fa-pencil"></i>
-              </a>
-            </aside>
-            
-            <aside class="page_number">
-              74/74
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source:  -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="page_number">
-              /74
+              80/80
             </aside>
           </footer>
         </div>
@@ -4596,13 +4800,13 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
       
       
       <tr id="toc-row-55">
-        <th><a href="#slide55">Active View</a></th>
+        <th><a href="#slide55">Activate View</a></th>
         <td><a href="#slide55">55</a></td>
       </tr>
       
       
       <tr id="toc-row-56">
-        <th><a href="#slide56">Active View</a></th>
+        <th><a href="#slide56">Activate View</a></th>
         <td><a href="#slide56">56</a></td>
       </tr>
       
@@ -4614,104 +4818,140 @@ echo $this-&gt;url('book', array('action' =&gt; 'book'), 'parm' =&gt;value);
       
       
       <tr id="toc-row-58">
-        <th><a href="#slide58">Action and View</a></th>
+        <th><a href="#slide58">Recovering data</a></th>
         <td><a href="#slide58">58</a></td>
       </tr>
       
       
       <tr id="toc-row-59">
-        <th><a href="#slide59">Action and View</a></th>
+        <th><a href="#slide59">Recovering data</a></th>
         <td><a href="#slide59">59</a></td>
       </tr>
       
       
       <tr id="toc-row-60">
-        <th><a href="#slide60">Use new Action and View</a></th>
+        <th><a href="#slide60">Recovering data</a></th>
         <td><a href="#slide60">60</a></td>
       </tr>
       
       
       <tr id="toc-row-61">
-        <th><a href="#slide61">Use new Action and View</a></th>
+        <th><a href="#slide61">Service Manager</a></th>
         <td><a href="#slide61">61</a></td>
       </tr>
       
       
       <tr id="toc-row-62">
-        <th><a href="#slide62">Use new Action and View</a></th>
+        <th><a href="#slide62">Service Manager</a></th>
         <td><a href="#slide62">62</a></td>
       </tr>
       
       
       <tr id="toc-row-63">
-        <th><a href="#slide63">Database</a></th>
+        <th><a href="#slide63">Service Manager</a></th>
         <td><a href="#slide63">63</a></td>
       </tr>
       
       
       <tr id="toc-row-64">
-        <th><a href="#slide64">Database Configuration</a></th>
+        <th><a href="#slide64">Type of Services</a></th>
         <td><a href="#slide64">64</a></td>
       </tr>
       
       
       <tr id="toc-row-65">
-        <th><a href="#slide65">Database Configuration</a></th>
+        <th><a href="#slide65">Type of Services</a></th>
         <td><a href="#slide65">65</a></td>
       </tr>
       
       
       <tr id="toc-row-66">
-        <th><a href="#slide66">Model</a></th>
+        <th><a href="#slide66">Type of Services</a></th>
         <td><a href="#slide66">66</a></td>
       </tr>
       
       
       <tr id="toc-row-67">
-        <th><a href="#slide67">Create Entity</a></th>
+        <th><a href="#slide67">Better Theme Integration</a></th>
         <td><a href="#slide67">67</a></td>
       </tr>
       
       
       <tr id="toc-row-68">
-        <th><a href="#slide68">Create Entity</a></th>
+        <th><a href="#slide68">Use view helpers</a></th>
         <td><a href="#slide68">68</a></td>
       </tr>
       
       
       <tr id="toc-row-69">
-        <th><a href="#slide69">Interaction with database</a></th>
+        <th><a href="#slide69">Use view helpers</a></th>
         <td><a href="#slide69">69</a></td>
       </tr>
       
       
       <tr id="toc-row-70">
-        <th><a href="#slide70">Interaction with database</a></th>
+        <th><a href="#slide70">Database</a></th>
         <td><a href="#slide70">70</a></td>
       </tr>
       
       
       <tr id="toc-row-71">
-        <th><a href="#slide71">Interaction with database</a></th>
+        <th><a href="#slide71">Database Configuration</a></th>
         <td><a href="#slide71">71</a></td>
       </tr>
       
       
       <tr id="toc-row-72">
-        <th><a href="#slide72">Interaction with database</a></th>
+        <th><a href="#slide72">Database Configuration</a></th>
         <td><a href="#slide72">72</a></td>
       </tr>
       
       
       <tr id="toc-row-73">
-        <th><a href="#slide73">Interaction with database</a></th>
+        <th><a href="#slide73">Model</a></th>
         <td><a href="#slide73">73</a></td>
       </tr>
       
       
       <tr id="toc-row-74">
-        <th><a href="#slide74">Service Manager</a></th>
+        <th><a href="#slide74">Create Entity</a></th>
         <td><a href="#slide74">74</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-75">
+        <th><a href="#slide75">Create Entity</a></th>
+        <td><a href="#slide75">75</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-76">
+        <th><a href="#slide76">Interaction with database</a></th>
+        <td><a href="#slide76">76</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-77">
+        <th><a href="#slide77">Interaction with database</a></th>
+        <td><a href="#slide77">77</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-78">
+        <th><a href="#slide78">Interaction with database</a></th>
+        <td><a href="#slide78">78</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-79">
+        <th><a href="#slide79">Interaction with database</a></th>
+        <td><a href="#slide79">79</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-80">
+        <th><a href="#slide80">Interaction with database</a></th>
+        <td><a href="#slide80">80</a></td>
       </tr>
       
       
