@@ -2219,13 +2219,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Secure cli calls</h2>
-<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nb">php_sapi_name</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;cli-server&#39;</span><span class="p">)</span> <span class="p">{</span>
-<span class="nv">$path</span> <span class="o">=</span> <span class="nb">realpath</span><span class="p">(</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nb">parse_url</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_URI&#39;</span><span class="p">],</span> <span class="nx">PHP_URL_PATH</span><span class="p">));</span>
-<span class="k">if</span> <span class="p">(</span><span class="k">__FILE__</span> <span class="o">!==</span> <span class="nv">$path</span> <span class="o">&amp;&amp;</span> <span class="nb">is_file</span><span class="p">(</span><span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nb">unset</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">if (php_sapi_name() === &#39;cli-server&#39;) {</span>
+<span class="x">$path = realpath(__DIR__ . parse_url($_SERVER[&#39;REQUEST_URI&#39;], PHP_URL_PATH));</span>
+<span class="x">if (__FILE__ !== $path &amp;&amp; is_file($path)) {</span>
+<span class="x">  return false;</span>
+<span class="x">}</span>
+<span class="x">unset($path);</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -2260,7 +2260,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Setup autoloading</h2>
-<div class="highlight"><pre><span class="k">require</span> <span class="s1">&#39;init_autoloader.php&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span class="x">require &#39;init_autoloader.php&#39;;</span>
 </pre></div>
 </section>
             
@@ -2295,7 +2295,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Zend\Mvc\Application</h2>
-<div class="highlight"><pre><span class="nx">Zend\Mvc\Application</span><span class="o">::</span><span class="na">init</span><span class="p">(</span><span class="k">require</span> <span class="s1">&#39;config/application.config.php&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span>
+<div class="highlight"><pre><span class="x">Zend\Mvc\Application::init(require &#39;config/application.config.php&#39;)-&gt;run();</span>
 </pre></div>
 </section>
             
@@ -2361,12 +2361,12 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Global Configuration</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-    <span class="c1">// This should be an array of module namespaces used in the application.</span>
-    <span class="s1">&#39;modules&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;Application&#39;</span><span class="p">,</span>
-    <span class="p">),</span>
-<span class="p">);</span>
+            <section><div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">    // This should be an array of module namespaces used in the application.</span>
+<span class="x">    &#39;modules&#39; =&gt; array(</span>
+<span class="x">        &#39;Application&#39;,</span>
+<span class="x">    ),</span>
+<span class="x">);</span>
 </pre></div>
 </section>
             
@@ -2400,18 +2400,18 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Global Configuration</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-    <span class="c1">// This should be an array of module namespaces used in the application.</span>
-    <span class="s1">&#39;modules&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;Application&#39;</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="s1">&#39;module_listener_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;module_paths&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-            <span class="s1">&#39;./module&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;./vendor&#39;</span><span class="p">,</span>
-        <span class="p">),</span>
-    <span class="p">),</span>
-<span class="p">);</span>
+            <section><div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">    // This should be an array of module namespaces used in the application.</span>
+<span class="x">    &#39;modules&#39; =&gt; array(</span>
+<span class="x">        &#39;Application&#39;,</span>
+<span class="x">    ),</span>
+<span class="x">    &#39;module_listener_options&#39; =&gt; array(</span>
+<span class="x">        &#39;module_paths&#39; =&gt; array(</span>
+<span class="x">            &#39;./module&#39;,</span>
+<span class="x">            &#39;./vendor&#39;,</span>
+<span class="x">        ),</span>
+<span class="x">    ),</span>
+<span class="x">);</span>
 </pre></div>
 </section>
             
@@ -2445,21 +2445,21 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Global Configuration</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-    <span class="c1">// This should be an array of module namespaces used in the application.</span>
-    <span class="s1">&#39;modules&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;Application&#39;</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="s1">&#39;module_listener_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;module_paths&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-            <span class="s1">&#39;./module&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;./vendor&#39;</span><span class="p">,</span>
-        <span class="p">),</span>
-        <span class="s1">&#39;config_glob_paths&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-            <span class="s1">&#39;config/autoload/{{,*.}global,{,*.}local}.php&#39;</span><span class="p">,</span>
-        <span class="p">),</span>
-    <span class="p">),</span>
-<span class="p">);</span>
+            <section><div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">    // This should be an array of module namespaces used in the application.</span>
+<span class="x">    &#39;modules&#39; =&gt; array(</span>
+<span class="x">        &#39;Application&#39;,</span>
+<span class="x">    ),</span>
+<span class="x">    &#39;module_listener_options&#39; =&gt; array(</span>
+<span class="x">        &#39;module_paths&#39; =&gt; array(</span>
+<span class="x">            &#39;./module&#39;,</span>
+<span class="x">            &#39;./vendor&#39;,</span>
+<span class="x">        ),</span>
+<span class="x">        &#39;config_glob_paths&#39; =&gt; array(</span>
+<span class="x">            &#39;config/autoload/{{,*.}global,{,*.}local}.php&#39;,</span>
+<span class="x">        ),</span>
+<span class="x">    ),</span>
+<span class="x">);</span>
 </pre></div>
 </section>
             
@@ -2497,7 +2497,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
 <p>When you use classes from different libraries in your program, the class names may conflict.</p>
 <p>To achieve the same goal, Zend Framework 2 uses the PHP 5.3 language feature called namespaces.</p>
 <p>The namespaces allow to solve the name collisions between code components, and provide you with the ability to make the long names shorter.</p>
-<div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Application</span><span class="p">;</span>
+<div class="highlight"><pre><span class="x">namespace Application;</span>
 </pre></div>
 </section>
             
@@ -2532,10 +2532,10 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Get Configure</h2>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">getConfig</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="k">include</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config/module.config.php&#39;</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">public function getConfig()</span>
+<span class="x">{</span>
+<span class="x">    return include __DIR__ . &#39;/config/module.config.php&#39;;</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -2570,16 +2570,16 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Get Autoloader Configure</h2>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">getAutoloaderConfig</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;Zend\Loader\StandardAutoloader&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-            <span class="s1">&#39;namespaces&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-                <span class="nx">__NAMESPACE__</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/src/&#39;</span> <span class="o">.</span> <span class="nx">__NAMESPACE__</span><span class="p">,</span>
-            <span class="p">),</span>
-        <span class="p">),</span>
-    <span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">public function getAutoloaderConfig()</span>
+<span class="x">{</span>
+<span class="x">    return array(</span>
+<span class="x">        &#39;Zend\Loader\StandardAutoloader&#39; =&gt; array(</span>
+<span class="x">            &#39;namespaces&#39; =&gt; array(</span>
+<span class="x">                __NAMESPACE__ =&gt; __DIR__ . &#39;/src/&#39; . __NAMESPACE__,</span>
+<span class="x">            ),</span>
+<span class="x">        ),</span>
+<span class="x">    );</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -2615,7 +2615,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>How use alias</h2>
 <p>It's also possible to use the alias (short name for the class) with the help of PHP’s use statement:</p>
-<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\Mvc\Controller\AbstractActionController</span><span class="p">;</span>
+<div class="highlight"><pre><span class="x">use Zend\Mvc\Controller\AbstractActionController;</span>
 </pre></div>
 
 <p>Although the alias allows to use a short class name instead of the full name, its usage is optional. You are not required to always use aliases, and can refer the class by its full name.</p></section>
@@ -2652,11 +2652,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>New Class Controller</h2>
 <p>In Zend Framework 2, the controller is a class that is generally called {Controller name}Controller</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">AbstractActionController</span>
+<div class="highlight"><pre><span class="x">class IndexController extends AbstractActionController</span>
 </pre></div>
 
 <p>Each action is a public method within the controller class that is named {action name}Action</p>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<div class="highlight"><pre><span class="x">public function indexAction()</span>
 </pre></div>
 </section>
             
@@ -2778,20 +2778,20 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><p>In the Skeleton Application, the default layout template file is called layout.phtml and is located inside of the view/layout directory in Application module’s directory</p>
-<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-    <span class="s1">&#39;view_manager&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-    <span class="s1">&#39;template_map&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;application/index/index&#39;</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span>  <span class="s1">&#39;/../view/application/index/index.phtml&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;site/layout&#39;</span>             <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view/layout/layout.phtml&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;error/index&#39;</span>             <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view/error/index.phtml&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;error/404&#39;</span>               <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view/error/404.phtml&#39;</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="s1">&#39;template_path_stack&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;application&#39;</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view&#39;</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="s1">&#39;layout&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;site/layout&#39;</span><span class="p">,</span>
-    <span class="p">),</span>
-<span class="p">);</span>
+<div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">    &#39;view_manager&#39; =&gt; array(</span>
+<span class="x">    &#39;template_map&#39; =&gt; array(</span>
+<span class="x">        &#39;application/index/index&#39; =&gt; __DIR__ .  &#39;/../view/application/index/index.phtml&#39;,</span>
+<span class="x">        &#39;site/layout&#39;             =&gt; __DIR__ . &#39;/../view/layout/layout.phtml&#39;,</span>
+<span class="x">        &#39;error/index&#39;             =&gt; __DIR__ . &#39;/../view/error/index.phtml&#39;,</span>
+<span class="x">        &#39;error/404&#39;               =&gt; __DIR__ . &#39;/../view/error/404.phtml&#39;,</span>
+<span class="x">    ),</span>
+<span class="x">    &#39;template_path_stack&#39; =&gt; array(</span>
+<span class="x">        &#39;application&#39; =&gt; __DIR__ . &#39;/../view&#39;,</span>
+<span class="x">    ),</span>
+<span class="x">    &#39;layout&#39; =&gt; &#39;site/layout&#39;,</span>
+<span class="x">    ),</span>
+<span class="x">);</span>
 </pre></div>
 </section>
             
@@ -2826,10 +2826,10 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><p>Let’s look at the layout.phtml template file in more details.</p>
-<div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headTitle</span><span class="p">(</span><span class="s1">&#39;ZF2 &#39;</span><span class="o">.</span> 
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">translate</span><span class="p">(</span><span class="s1">&#39;Skeleton Application&#39;</span><span class="p">))</span>
-           <span class="o">-&gt;</span><span class="na">setSeparator</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)</span>
-           <span class="o">-&gt;</span><span class="na">setAutoEscape</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
+<div class="highlight"><pre><span class="x">echo $this-&gt;headTitle(&#39;ZF2 &#39;. </span>
+<span class="x">      $this-&gt;translate(&#39;Skeleton Application&#39;))</span>
+<span class="x">           -&gt;setSeparator(&#39; - &#39;)</span>
+<span class="x">           -&gt;setAutoEscape(false)</span>
 </pre></div>
 
 <p>headTitle we have the HeadTitle view helper that allows to define the title for the page (“ZF2 Skeleton Application”).</p></section>
@@ -2864,9 +2864,9 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headMeta</span><span class="p">()</span>
-    <span class="o">-&gt;</span><span class="na">appendName</span><span class="p">(</span><span class="s1">&#39;viewport&#39;</span><span class="p">,</span> <span class="s1">&#39;width=device-width, initial-scale=1.0&#39;</span><span class="p">)</span>
-    <span class="o">-&gt;</span><span class="na">appendHttpEquiv</span><span class="p">(</span><span class="s1">&#39;X-UA-Compatible&#39;</span><span class="p">,</span> <span class="s1">&#39;IE=edge&#39;</span><span class="p">)</span>
+            <section><div class="highlight"><pre><span class="x">echo $this-&gt;headMeta()</span>
+<span class="x">    -&gt;appendName(&#39;viewport&#39;, &#39;width=device-width, initial-scale=1.0&#39;)</span>
+<span class="x">    -&gt;appendHttpEquiv(&#39;X-UA-Compatible&#39;, &#39;IE=edge&#39;)</span>
 </pre></div>
 
 <p>The HeadMeta view helper allows to define the <meta name="viewport"> tag containing meta information for the web browser to control layout on different display devices, including mobile browsers.</p></section>
@@ -2901,12 +2901,12 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headLink</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;rel&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;shortcut icon&#39;</span><span class="p">,</span> 
-            <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;image/vnd.microsoft.icon&#39;</span><span class="p">,</span> 
-            <span class="s1">&#39;href&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/img/favicon.ico&#39;</span><span class="p">))</span>
-    <span class="o">-&gt;</span><span class="na">prependStylesheet</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/css/style.css&#39;</span><span class="p">)</span>
-    <span class="o">-&gt;</span><span class="na">prependStylesheet</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/css/bootstrap-theme.min.css&#39;</span><span class="p">)</span>
-    <span class="o">-&gt;</span><span class="na">prependStylesheet</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/css/bootstrap.min.css&#39;</span><span class="p">)</span>
+            <section><div class="highlight"><pre><span class="x">echo $this-&gt;headLink(array(&#39;rel&#39; =&gt; &#39;shortcut icon&#39;, </span>
+<span class="x">            &#39;type&#39; =&gt; &#39;image/vnd.microsoft.icon&#39;, </span>
+<span class="x">            &#39;href&#39; =&gt; $this-&gt;basePath().&#39;/img/favicon.ico&#39;))</span>
+<span class="x">    -&gt;prependStylesheet($this-&gt;basePath().&#39;/css/style.css&#39;)</span>
+<span class="x">    -&gt;prependStylesheet($this-&gt;basePath().&#39;/css/bootstrap-theme.min.css&#39;)</span>
+<span class="x">    -&gt;prependStylesheet($this-&gt;basePath().&#39;/css/bootstrap.min.css&#39;)</span>
 </pre></div>
 
 <p>The HeadLink view helper allows to define the <link> tags. With the <link> tags, you typically define the “favicon” for the page (located in APP_DATA\public\img\favicon.ico file) and the CSS stylesheets.</p>
@@ -2942,14 +2942,14 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">headScript</span><span class="p">()</span>
-   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/bootstrap.min.js&#39;</span><span class="p">)</span>
-   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/jquery.min.js&#39;</span><span class="p">)</span>
-   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/respond.min.js&#39;</span><span class="p">,</span> <span class="s1">&#39;text/javascript&#39;</span><span class="nx">\</span>
-<span class="p">,</span> 
-                    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;conditional&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;lt IE 9&#39;</span><span class="p">,))</span>
-   <span class="o">-&gt;</span><span class="na">prependFile</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">basePath</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/js/html5shiv.js&#39;</span><span class="p">,</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">,</span> 
-                    <span class="k">array</span><span class="p">(</span><span class="s1">&#39;conditional&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;lt IE 9&#39;</span><span class="p">,));</span>
+            <section><div class="highlight"><pre><span class="x">echo $this-&gt;headScript()</span>
+<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/bootstrap.min.js&#39;)</span>
+<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/jquery.min.js&#39;)</span>
+<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/respond.min.js&#39;, &#39;text/javascript&#39;\</span>
+<span class="x">, </span>
+<span class="x">                    array(&#39;conditional&#39; =&gt; &#39;lt IE 9&#39;,))</span>
+<span class="x">   -&gt;prependFile($this-&gt;basePath().&#39;/js/html5shiv.js&#39;, &#39;text/javascript&#39;, </span>
+<span class="x">                    array(&#39;conditional&#39; =&gt; &#39;lt IE 9&#39;,));</span>
 </pre></div>
 
 <p>$this-&gt;headScript include the JavaScript files that all your web pages will load. </p></section>
@@ -2984,11 +2984,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Layout</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">content</span><span class="p">()</span>
+            <section><div class="highlight"><pre><span class="x">echo $this-&gt;content()</span>
 </pre></div>
 
 <p>this is very important, because this line defines the inline PHP code that represents the page content placeholder we talked about in the beginning of this section. When the ZF2 page renderer evaluates the layout template, it echoes the actual page content here.</p>
-<div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">inlineScript</span><span class="p">()</span>
+<div class="highlight"><pre><span class="x">$this-&gt;inlineScript()</span>
 </pre></div>
 
 <p>This's the placeholder for JavaScript scripts loaded by the concrete page. The InlineScript view helper will substitute here all the scripts you register (about registering JavaScript scripts, you will see it later in this chapter).</p></section>
@@ -3024,9 +3024,9 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Add new action</h2>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">public function helloAction()</span>
+<span class="x">{</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -3061,11 +3061,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Use Model View to send data</h2>
-<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
-<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="nx">ViewModel</span><span class="p">();</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
+<span class="x">public function helloAction()</span>
+<span class="x">{</span>
+<span class="x">    return ViewModel();</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -3100,13 +3100,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Display "Hello World" in the page</h2>
-<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
-<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="nx">ViewModel</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hello world&#39;</span>
-    <span class="p">));</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
+<span class="x">public function helloAction()</span>
+<span class="x">{</span>
+<span class="x">    return ViewModel(array(</span>
+<span class="x">        &#39;message&#39; =&gt; &#39;Hello world&#39;</span>
+<span class="x">    ));</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -3141,13 +3141,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Display "Hello World" in the page</h2>
-<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
-<span class="k">public</span> <span class="k">function</span> <span class="nf">helloAction</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="nx">ViewModel</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hello world&#39;</span>
-    <span class="p">));</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
+<span class="x">public function helloAction()</span>
+<span class="x">{</span>
+<span class="x">    return ViewModel(array(</span>
+<span class="x">        &#39;message&#39; =&gt; &#39;Hello world&#39;</span>
+<span class="x">    ));</span>
+<span class="x">}</span>
 </pre></div>
 
 <p>Add now in the script view hello.phtml:</p>
@@ -3314,13 +3314,13 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Create new controller</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Guestbook\Controller</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Zend\Mvc\Controller\AbstractActionController</span><span class="p">;</span>
-<span class="k">class</span> <span class="nc">IndexController</span> <span class="k">extends</span> <span class="nx">AbstractActionController</span>
-<span class="p">{</span>
- <span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
- <span class="p">{</span>
-<span class="p">}</span>
+            <section><div class="highlight"><pre><span class="x">namespace Guestbook\Controller;</span>
+<span class="x">use Zend\Mvc\Controller\AbstractActionController;</span>
+<span class="x">class IndexController extends AbstractActionController</span>
+<span class="x">{</span>
+<span class="x"> public function indexAction()</span>
+<span class="x"> {</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -3354,27 +3354,27 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <header><h1>Configure Route</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-<span class="s1">&#39;router&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-    <span class="s1">&#39;routes&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-    <span class="s1">&#39;guestbook&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;literal&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-                    <span class="s1">&#39;route&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/guestbook&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;defaults&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-                    <span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;guestbook-index&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span>
-                <span class="p">),</span>
-            <span class="p">),</span>
-        <span class="p">),</span>
-    <span class="p">),</span>
-<span class="p">),</span>
-<span class="s1">&#39;controllers&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-    <span class="s1">&#39;invokables&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;guestbook-index&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Guestbook\Controller\IndexController&#39;</span>
-        <span class="p">),</span>
-    <span class="p">),</span>
-<span class="p">);</span>
+            <section><div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">&#39;router&#39; =&gt; array(</span>
+<span class="x">    &#39;routes&#39; =&gt; array(</span>
+<span class="x">    &#39;guestbook&#39; =&gt; array(</span>
+<span class="x">        &#39;type&#39; =&gt; &#39;literal&#39;,</span>
+<span class="x">            &#39;options&#39; =&gt; array(</span>
+<span class="x">                    &#39;route&#39; =&gt; &#39;/guestbook&#39;,</span>
+<span class="x">                    &#39;defaults&#39; =&gt; array(</span>
+<span class="x">                    &#39;controller&#39; =&gt; &#39;guestbook-index&#39;,</span>
+<span class="x">                    &#39;action&#39; =&gt; &#39;index&#39;,</span>
+<span class="x">                ),</span>
+<span class="x">            ),</span>
+<span class="x">        ),</span>
+<span class="x">    ),</span>
+<span class="x">),</span>
+<span class="x">&#39;controllers&#39; =&gt; array(</span>
+<span class="x">    &#39;invokables&#39; =&gt; array(</span>
+<span class="x">        &#39;guestbook-index&#39; =&gt; &#39;Guestbook\Controller\IndexController&#39;</span>
+<span class="x">        ),</span>
+<span class="x">    ),</span>
+<span class="x">);</span>
 </pre></div>
 </section>
             
@@ -3410,11 +3410,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>View Manager</h2>
 <p>In module/Guestbook/config/module.config.php file :</p>
-<div class="highlight"><pre><span class="s1">&#39;view_manager&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-         <span class="s1">&#39;template_path_stack&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-         <span class="s1">&#39;guestbook&#39;</span> <span class="o">=&gt;</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../view&#39;</span><span class="p">,</span>
-     <span class="p">),</span>
- <span class="p">),</span>
+<div class="highlight"><pre><span class="x">&#39;view_manager&#39; =&gt; array(</span>
+<span class="x">         &#39;template_path_stack&#39; =&gt; array(</span>
+<span class="x">         &#39;guestbook&#39; =&gt; __DIR__ . &#39;/../view&#39;,</span>
+<span class="x">     ),</span>
+<span class="x"> ),</span>
 </pre></div>
 </section>
             
@@ -3450,11 +3450,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>Use View Model</h2>
 <p>In module/Guestbook/src/Guestbook/Controller/IndexController.php file :</p>
-<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\View\Model\ViewModel</span><span class="p">;</span>
+<div class="highlight"><pre><span class="x">use Zend\View\Model\ViewModel;</span>
 </pre></div>
 
 <p>And In IndexAction function we need to add :</p>
-<div class="highlight"><pre><span class="k">return</span> <span class="k">new</span> <span class="nx">ViewModel</span><span class="p">();</span>
+<div class="highlight"><pre><span class="x">return new ViewModel();</span>
 </pre></div>
 
 <p>Finaly add new file module/Guestbook/view/guestbook/index/index.phtml</p>
@@ -3582,11 +3582,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Use Service Layer</h2>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="nv">$entryService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Guestbook\Service\Entry</span><span class="p">();</span>
-    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;entries&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entryService</span><span class="o">-&gt;</span><span class="na">getLasts</span><span class="p">()];</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">public function indexAction()</span>
+<span class="x">{</span>
+<span class="x">    $entryService = new Guestbook\Service\Entry();</span>
+<span class="x">    return [&#39;entries&#39; =&gt; $entryService-&gt;getLasts()];</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -3621,23 +3621,23 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Service class</h2>
-<div class="highlight"><pre><span class="k">namespace</span> <span class="nx">Guestbook\Service</span><span class="p">;</span>
-<span class="k">class</span> <span class="nc">Entry</span>
-<span class="p">{</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">getLasts</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="nv">$entries</span> <span class="o">=</span> <span class="p">[];</span>
-        <span class="nv">$entry</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\stdClass</span><span class="p">();</span>
-        <span class="nv">$entry</span><span class="o">-&gt;</span><span class="na">message</span> <span class="o">=</span> <span class="s2">&quot;Ceci n&#39;est pas un message&quot;</span><span class="p">;</span>
-        <span class="nv">$entry</span><span class="o">-&gt;</span><span class="na">date</span> <span class="o">=</span> <span class="s2">&quot;May 15, 2012&quot;</span><span class="p">;</span>
-        <span class="nv">$entry</span><span class="o">-&gt;</span><span class="na">author</span> <span class="o">=</span> <span class="s1">&#39;Gabriele Santini&#39;</span><span class="p">;</span>
-        <span class="nv">$entries</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$entry</span><span class="p">;</span>
-        <span class="nv">$entries</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$entry</span><span class="p">;</span>
-        <span class="nv">$entries</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$entry</span><span class="p">;</span>
+<div class="highlight"><pre><span class="x">namespace Guestbook\Service;</span>
+<span class="x">class Entry</span>
+<span class="x">{</span>
+<span class="x">    public function getLasts()</span>
+<span class="x">    {</span>
+<span class="x">        $entries = [];</span>
+<span class="x">        $entry = new \stdClass();</span>
+<span class="x">        $entry-&gt;message = &quot;Ceci n&#39;est pas un message&quot;;</span>
+<span class="x">        $entry-&gt;date = &quot;May 15, 2012&quot;;</span>
+<span class="x">        $entry-&gt;author = &#39;Gabriele Santini&#39;;</span>
+<span class="x">        $entries[] = $entry;</span>
+<span class="x">        $entries[] = $entry;</span>
+<span class="x">        $entries[] = $entry;</span>
 
-        <span class="k">return</span> <span class="nv">$entries</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="x">        return $entries;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -3673,23 +3673,23 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>Dependency Injection (DI)</h2>
 <p>from this</p>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nv">$entryService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Guestbook\Service\Entry</span><span class="p">();</span>
-    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;entries&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entryService</span><span class="o">-&gt;</span><span class="na">getLasts</span><span class="p">()];</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">public function indexAction() {</span>
+<span class="x">    $entryService = new Guestbook\Service\Entry();</span>
+<span class="x">    return [&#39;entries&#39; =&gt; $entryService-&gt;getLasts()];</span>
+<span class="x">}</span>
 </pre></div>
 
 <p>to this</p>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">setEntryService</span><span class="p">(</span><span class="nv">$entryService</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">entryService</span> <span class="o">=</span> <span class="nv">$entryService</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">public</span> <span class="k">function</span> <span class="nf">getEntryService</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">entryService</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;entries&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEntryService</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getLasts</span><span class="p">()];</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">public function setEntryService($entryService) {</span>
+<span class="x">    $this-&gt;entryService = $entryService;</span>
+<span class="x">}</span>
+<span class="x">public function getEntryService() {</span>
+<span class="x">    return $this-&gt;entryService;</span>
+<span class="x">}</span>
+<span class="x">public function indexAction()</span>
+<span class="x">{</span>
+<span class="x">    return [&#39;entries&#39; =&gt; $this-&gt;getEntryService()-&gt;getLasts()];</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -3764,16 +3764,16 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <section><h2>How does it works?</h2>
 <p>Service Locator pattern:</p>
 <p>You define your services by configuration or by code giving them a name</p>
-<div class="highlight"><pre><span class="p">[</span><span class="s1">&#39;service_manager&#39;</span> <span class="o">=&gt;</span> 
-    <span class="p">[</span><span class="s1">&#39;typeOfService&#39;</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="p">[</span>
-        <span class="s1">&#39;myService&#39;</span> <span class="o">=&gt;</span> <span class="o">...</span> <span class="p">]</span>
-    <span class="p">]];</span>
+<div class="highlight"><pre><span class="x">[&#39;service_manager&#39; =&gt; </span>
+<span class="x">    [&#39;typeOfService&#39;] =&gt; [</span>
+<span class="x">        &#39;myService&#39; =&gt; ... ]</span>
+<span class="x">    ]];</span>
 
-<span class="nv">$sm</span><span class="o">-&gt;</span><span class="na">set</span><span class="o">&lt;</span><span class="nx">typeOfService</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;myService&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
+<span class="x">$sm-&gt;set&lt;typeOfService&gt;(&#39;myService&#39;, ...);</span>
 </pre></div>
 
 <p>You recover them later simply calling them by name</p>
-<div class="highlight"><pre><span class="nv">$sm</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;myService&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span class="x">$sm-&gt;get(&#39;myService&#39;);</span>
 </pre></div>
 </section>
             
@@ -3971,11 +3971,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>Link</h2>
-<div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">url</span><span class="p">(</span><span class="s1">&#39;guestbook&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span class="x">echo $this-&gt;url(&#39;guestbook&#39;);</span>
 </pre></div>
 
 <h2>Link with params</h2>
-<div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">url</span><span class="p">(</span><span class="s1">&#39;guestbook&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;other&#39;</span><span class="p">),</span> <span class="s1">&#39;param&#39;</span> <span class="o">=&gt;</span> <span class="nx">value</span><span class="p">);</span>
+<div class="highlight"><pre><span class="x">echo $this-&gt;url(&#39;guestbook&#39;, array(&#39;action&#39; =&gt; &#39;other&#39;), &#39;param&#39; =&gt; value);</span>
 </pre></div>
 </section>
             
@@ -4040,14 +4040,14 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>global.php</h2>
-<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-     <span class="s1">&#39;db&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-         <span class="s1">&#39;driver&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;pdo&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;dsn&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;mysql:dbname=guestbook;host=localhost&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;driver_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span> <span class="o">=&gt;</span> <span class="s2">&quot;SET NAMES &#39;UTF8&#39;&quot;</span><span class="p">,</span>
-         <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">),</span>
-     <span class="p">),</span>
- <span class="p">);</span>
+<div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">     &#39;db&#39; =&gt; array(</span>
+<span class="x">         &#39;driver&#39; =&gt; &#39;pdo&#39;,</span>
+<span class="x">         &#39;dsn&#39; =&gt; &#39;mysql:dbname=guestbook;host=localhost&#39;,</span>
+<span class="x">         &#39;driver_options&#39; =&gt; array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &quot;SET NAMES &#39;UTF8&#39;&quot;,</span>
+<span class="x">         PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION),</span>
+<span class="x">     ),</span>
+<span class="x"> );</span>
 </pre></div>
 </section>
             
@@ -4082,23 +4082,23 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             
             <section><h2>global.php</h2>
-<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-     <span class="s1">&#39;db&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-         <span class="s1">&#39;driver&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;pdo&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;dsn&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;mysql:dbname=guestbook;host=localhost&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;driver_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span> <span class="o">=&gt;</span> <span class="s2">&quot;SET NAMES &#39;UTF8&#39;&quot;</span><span class="p">,</span>
-         <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">),</span>
-     <span class="p">),</span>
- <span class="p">);</span>
+<div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">     &#39;db&#39; =&gt; array(</span>
+<span class="x">         &#39;driver&#39; =&gt; &#39;pdo&#39;,</span>
+<span class="x">         &#39;dsn&#39; =&gt; &#39;mysql:dbname=guestbook;host=localhost&#39;,</span>
+<span class="x">         &#39;driver_options&#39; =&gt; array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; &quot;SET NAMES &#39;UTF8&#39;&quot;,</span>
+<span class="x">         PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION),</span>
+<span class="x">     ),</span>
+<span class="x"> );</span>
 </pre></div>
 
 <h2>local.php</h2>
-<div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-     <span class="s1">&#39;db&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-         <span class="s1">&#39;username&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;XXX&#39;</span><span class="p">,</span>
-     <span class="p">),</span>
- <span class="p">);</span>
+<div class="highlight"><pre><span class="x">return array(</span>
+<span class="x">     &#39;db&#39; =&gt; array(</span>
+<span class="x">         &#39;username&#39; =&gt; &#39;root&#39;,</span>
+<span class="x">         &#39;password&#39; =&gt; &#39;XXX&#39;,</span>
+<span class="x">     ),</span>
+<span class="x"> );</span>
 </pre></div>
 </section>
             
@@ -4165,11 +4165,11 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <section><h2>Attributes statement</h2>
 <p>In our example "guestbook" we have five cloumns in table entry</p>
 <p>So in attributes statement we find protected variable relative to those in the table</p>
-<div class="highlight"><pre><span class="k">protected</span> <span class="nv">$id</span><span class="p">;</span>
-<span class="k">protected</span> <span class="nv">$name</span><span class="p">;</span>
-<span class="k">protected</span> <span class="nv">$email</span><span class="p">;</span>
-<span class="k">protected</span> <span class="nv">$website</span><span class="p">;</span>
-<span class="k">protected</span> <span class="nv">$message</span><span class="p">;</span>
+<div class="highlight"><pre><span class="x">protected $id;</span>
+<span class="x">protected $name;</span>
+<span class="x">protected $email;</span>
+<span class="x">protected $website;</span>
+<span class="x">protected $message;</span>
 </pre></div>
 </section>
             
@@ -4206,18 +4206,18 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <section><h2>Methods statement</h2>
 <p>In the next time we find the setter and getter for these protected attributes</p>
 <p>Example setter function</p>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">setId</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span>
- <span class="p">{</span>
-     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">=</span> <span class="nv">$id</span><span class="p">;</span>
-     <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
- <span class="p">}</span>
+<div class="highlight"><pre><span class="x">public function setId($id)</span>
+<span class="x"> {</span>
+<span class="x">     $this-&gt;id = $id;</span>
+<span class="x">     return $this;</span>
+<span class="x"> }</span>
 </pre></div>
 
 <p>Example getter function</p>
-<div class="highlight"><pre> <span class="k">public</span> <span class="k">function</span> <span class="nf">getId</span><span class="p">()</span>
- <span class="p">{</span>
-    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
- <span class="p">}</span>
+<div class="highlight"><pre><span class="x"> public function getId()</span>
+<span class="x"> {</span>
+<span class="x">    return $this-&gt;id;</span>
+<span class="x"> }</span>
 </pre></div>
 </section>
             
@@ -4253,15 +4253,15 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             
             <section><h2>TableGateway</h2>
 <p>In ZF2 we need to construct a class extends from TableGateway like this example in Guestbook</p>
-<div class="highlight"><pre><span class="k">use</span> <span class="nx">Zend\Db\TableGateway\TableGateway</span><span class="p">;</span>
-<span class="k">class</span> <span class="nc">EntryTable</span> <span class="k">extends</span> <span class="nx">TableGateway</span>
-<span class="p">{</span>
-     <span class="k">public</span> <span class="k">function</span> <span class="nf">findAll</span><span class="p">()</span>
-     <span class="p">{</span>
-         <span class="nv">$resultSet</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
-         <span class="k">return</span> <span class="nv">$resultSet</span><span class="p">;</span>
-     <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span class="x">use Zend\Db\TableGateway\TableGateway;</span>
+<span class="x">class EntryTable extends TableGateway</span>
+<span class="x">{</span>
+<span class="x">     public function findAll()</span>
+<span class="x">     {</span>
+<span class="x">         $resultSet = $this-&gt;select();</span>
+<span class="x">         return $resultSet;</span>
+<span class="x">     }</span>
+<span class="x">}</span>
 </pre></div>
 
 <p>the function select() is not declared in our class so absolutely it's from parents class</p></section>
@@ -4299,7 +4299,7 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <section><h2>TableGateway</h2>
 <p>Let’s look at the TableGateway class in more details</p>
 <p>The class TableGatway also extends from AbstractTableGateway</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="nc">TableGateway</span> <span class="k">extends</span> <span class="nx">AbstractTableGateway</span>
+<div class="highlight"><pre><span class="x">class TableGateway extends AbstractTableGateway</span>
 </pre></div>
 </section>
             
@@ -4336,15 +4336,15 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <section><h2>TableGateway</h2>
 <p>Let’s look at the TableGateway class in more details</p>
 <p>The class TableGatway also extends from AbstractTableGateway</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="nc">TableGateway</span> <span class="k">extends</span> <span class="nx">AbstractTableGateway</span>
+<div class="highlight"><pre><span class="x">class TableGateway extends AbstractTableGateway</span>
 </pre></div>
 
 <p>This class has a construct function let's look in roughly speaking these params</p>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> 
-                            <span class="nx">AdapterInterface</span> <span class="nv">$adapter</span><span class="p">,</span>
-                            <span class="nv">$features</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
-                            <span class="nx">ResultSetInterface</span> <span class="nv">$resultSetPrototype</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
-                            <span class="nx">Sql</span> <span class="nv">$sql</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+<div class="highlight"><pre><span class="x">public function __construct($table, </span>
+<span class="x">                            AdapterInterface $adapter,</span>
+<span class="x">                            $features = null,</span>
+<span class="x">                            ResultSetInterface $resultSetPrototype = null,</span>
+<span class="x">                            Sql $sql = null)</span>
 </pre></div>
 </section>
             
@@ -4381,15 +4381,15 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <section><h2>TableGateway</h2>
 <p>Let’s look at the TableGateway class in more details</p>
 <p>The class TableGatway also extends from AbstractTableGateway</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="nc">TableGateway</span> <span class="k">extends</span> <span class="nx">AbstractTableGateway</span>
+<div class="highlight"><pre><span class="x">class TableGateway extends AbstractTableGateway</span>
 </pre></div>
 
 <p>This class has a construct function let's look in roughly speaking these params</p>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> 
-                            <span class="nx">AdapterInterface</span> <span class="nv">$adapter</span><span class="p">,</span>
-                            <span class="nv">$features</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
-                            <span class="nx">ResultSetInterface</span> <span class="nv">$resultSetPrototype</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span>
-                            <span class="nx">Sql</span> <span class="nv">$sql</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+<div class="highlight"><pre><span class="x">public function __construct($table, </span>
+<span class="x">                            AdapterInterface $adapter,</span>
+<span class="x">                            $features = null,</span>
+<span class="x">                            ResultSetInterface $resultSetPrototype = null,</span>
+<span class="x">                            Sql $sql = null)</span>
 </pre></div>
 
 <p>Looking select() function also it's not here so perforce we need to discover yet AbstractTableGateway</p></section>
@@ -4427,20 +4427,20 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
             <section><h2>AbstractTableGateway</h2>
 <p>In this class we find many function declared like select(), insert() ..</p>
 <p>In our example : select()</p>
-<div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">select</span><span class="p">(</span><span class="nv">$where</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">isInitialized</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">initialize</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="nv">$select</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">sql</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
+<div class="highlight"><pre><span class="x">public function select($where = null)</span>
+<span class="x">{</span>
+<span class="x">    if (!$this-&gt;isInitialized) {</span>
+<span class="x">        $this-&gt;initialize();</span>
+<span class="x">    }</span>
+<span class="x">    $select = $this-&gt;sql-&gt;select();</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nv">$where</span> <span class="nx">instanceof</span> <span class="nx">\Closure</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nv">$where</span><span class="p">(</span><span class="nv">$select</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$where</span> <span class="o">!==</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nv">$select</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="nv">$where</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">selectWith</span><span class="p">(</span><span class="nv">$select</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="x">    if ($where instanceof \Closure) {</span>
+<span class="x">        $where($select);</span>
+<span class="x">    } elseif ($where !== null) {</span>
+<span class="x">        $select-&gt;where($where);</span>
+<span class="x">    }</span>
+<span class="x">    return $this-&gt;selectWith($select);</span>
+<span class="x">}</span>
 </pre></div>
 </section>
             
@@ -5071,32 +5071,32 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             	state.currentSlide == 11 || state.currentSlide == 17 || state.currentSlide == 18 ||
                 state.currentSlide == 19 || state.currentSlide == 20 || state.currentSlide == 21) {
             	$('.slides').css(
-                		'background' , ' -moz-linear-gradient(top, #444 0%, #555 100%)'
+                		'background' , 'url("css/gsc.png") no-repeat 0 656px, -moz-linear-gradient(top, #444 0%, #555 100%)'
                 	);
                 	$('.slides').css(
-                    		'background' , ' -webkit-linear-gradient(top, #444 0%, #555 100%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -webkit-linear-gradient(top, #444 0%, #555 100%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -o-linear-gradient(top, #444 0%, #555 100%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -o-linear-gradient(top, #444 0%, #555 100%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -ms-linear-gradient(top, #444 0%, #555 100%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -ms-linear-gradient(top, #444 0%, #555 100%)'
                     );
             }
             //zoom php
             else if (state.currentSlide == 29 || state.currentSlide == 30 ||
             		 state.currentSlide == 31 || state.currentSlide == 32) {
             	    $('.slides').css(
-                		'background' , ' -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                		'background' , 'url("css/gsc.png") no-repeat 0 656px, -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
                 	);
                 	$('.slides').css(
-                    		'background' , ' -webkit-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -webkit-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -o-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                    		'background' , ' url("css/gsc.png") no-repeat 0 656px, -o-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -ms-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
+                    		'background' , ' url("css/gsc.png") no-repeat 0 656px, -ms-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 80%, rgba(125,185,232,1) 80%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(41,137,216,1) 101%)'
                     );
             }
             //zoom MVC
@@ -5106,31 +5106,31 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
                      state.currentSlide == 46 || state.currentSlide == 47 || state.currentSlide == 48 || 
                      state.currentSlide == 49) {
             	$('.slides').css(
-                		'background' , ' -moz-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                		'background' , 'url("css/gsc.png") no-repeat 0 656px, -moz-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
                 	);
                 	$('.slides').css(
-                    		'background' , ' -webkit-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -webkit-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -o-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -o-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -ms-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -ms-linear-gradient(top, rgba(115,68,15,1) 0%, rgba(228,114,26,1) 80%, rgba(228,114,26,1) 80%, rgba(164,85,20,1) 100%, rgba(150,79,16,1) 100%, rgba(164,85,20,1) 101%)'
                     );
             }
             //zoom ZF2
             else {
             	$('.slides').css(
-                		'background' , ' -moz-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                		'background' , 'url("css/gsc.png") no-repeat 0 656px, -moz-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
                 	);
                 	$('.slides').css(
-                    		'background' , ' -webkit-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -webkit-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -o-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -o-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
                     );
                 	$('.slides').css(
-                    		'background' , ' -ms-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
+                    		'background' , 'url("css/gsc.png") no-repeat 0 656px, -ms-linear-gradient(top, rgba(30,154,55,1) 0%, rgba(126,232,137,1) 80%, rgba(126,232,137,1) 80%, rgba(42,216,62,1) 100%, rgba(32,202,55,1) 100%, rgba(42,216,62,1) 101%)'
                     );
             }
             // Update active ToC row
